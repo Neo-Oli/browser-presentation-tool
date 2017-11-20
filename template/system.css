@@ -1,0 +1,31 @@
+.prev,.next{
+    position:fixed;
+    z-index:10000;
+    height:100vh;
+    width:100px;
+    top:0;
+    cursor:pointer;
+    opacity:0;
+}
+.next{
+    right:0;
+}
+body{
+    overflow:hidden;
+}
+section{
+    height:100vh;
+    overflow:auto;
+    /*space for footer*/
+    height:calc(100vh - var(--footerHeight));
+    margin-bottom: var(--footerHeight);
+}
+footer{
+    height:var(--footerHeight);
+}
+*[data-order]{
+    visibility:hidden;
+}
+*[data-order].visible{
+    visibility:visible;
+}
