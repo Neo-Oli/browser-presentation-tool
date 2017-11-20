@@ -12,16 +12,12 @@ body{
     section{
         height:100vh;
     }
-    .slide2{
-        background-color:#171717;
-        color:white;
-    }
         </style>
         <script>
-            slidenum=1;
+var slidenum=1;
 document.addEventListener('keyup', function(e){
-    next=new Array(32,34,39,40);
-    prev=new Array(33,8,37,38);
+    var next=new Array(32,34,39,40);
+    var prev=new Array(33,8,37,38);
     if(next.includes(e.keyCode)){
         slidenum+=1;
         if(!document.querySelector('section:nth-of-type('+slidenum+')')){
@@ -47,6 +43,12 @@ document.addEventListener('keyup', function(e){
 });
 
         </script>
+        <style>
+.slide2{
+    background-color:#171717;
+    color:white;
+}
+        </style>
     </head>
     <body>
         <section>
