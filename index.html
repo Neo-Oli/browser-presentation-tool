@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>PRESENTATION</title>
+        <style>
+body{
+    margin:0;
+    overflow:hidden;
+}
+    section{
+        height:100vh;
+    }
+    .slide2{
+        background-color:#171717;
+        color:white;
+    }
+        </style>
+        <script>
+            slidenum=1;
+document.addEventListener('keyup', function(e){
+    next=new Array(32,34,39,40);
+    prev=new Array(33,8,37,38);
+    if(next.includes(e.keyCode)){
+        slidenum+=1;
+        if(!document.querySelector('section:nth-of-type('+slidenum+')')){
+            slidenum-=1;
+        }
+    }
+    if(prev.includes(e.keyCode)){
+        slidenum-=1;
+        if(slidenum==0){
+            slidenum=1
+        }
+    }
+    window.scroll(0,findPos(document.querySelector('section:nth-of-type('+slidenum+')')));
+    function findPos(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            return [curtop];
+        }
+    }
+});
+
+        </script>
+    </head>
+    <body>
+        <section>
+            This is a slide
+        </section>
+        <section class="slide2">
+            This is slide number 2
+        </section>
+        <section>
+            This is slide number 3
+        </section>
+    </body>
+</html>
+
