@@ -54,7 +54,7 @@ function next(){
         update();
     }
 }
-document.addEventListener('keyup', function(e){
+document.addEventListener('keydown', function(e){
     var nextkeys=new Array(32,34,39,40,13);
     var prevkeys=new Array(33,8,37,38);
     console.log(e.keyCode);
