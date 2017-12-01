@@ -80,3 +80,7 @@ h1{
     text-align:center;
     background-color:#999999;
 }
+.fullscreen{
+    padding:0;
+    width:100%;
+}
