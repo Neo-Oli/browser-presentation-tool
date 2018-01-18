@@ -1,8 +1,8 @@
-<footer>Max Muster | Title of my Presentation | 20.06.2017</footer>
+<footer><?=$author?> | <?=$title?> | <?=$date?></footer>
 <section class="title nofooter">
-    <h1>Template to create html presentations</h1>
-    <p>Oliver Schmidhauser</p>
-    <p>20.06.2017</p>
+    <h1><?=$title?></h1>
+    <p><?=$author?></p>
+    <p><?=$date?></p>
 
 </section>
 <section>
