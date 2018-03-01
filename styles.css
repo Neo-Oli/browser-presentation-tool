@@ -78,9 +78,12 @@ h1{
     justify-content: center;
     flex-direction: column;
     text-align:center;
-    background-color:#999999;
+    background-color:#222222;
+    color:white;
 }
 .fullscreen{
     padding:0;
     width:100%;
 }
+
+

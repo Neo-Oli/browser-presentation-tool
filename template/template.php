@@ -13,6 +13,7 @@
             </style>
     </head>
     <body>
+        <div id="intrpduction" class="message">Change slides with the arrow keys or by tapping the left and right side of the screen</div>
         <?php include("../slides.php");?>
         <a class="prev" href="javascript:prev()"></a>
         <a class="next" href="javascript:next()"></a>

@@ -29,3 +29,26 @@ footer{
 *[data-order].visible{
     visibility:visible;
 }
+
+.message{
+    background-color:rgba(100,100,100,0.9);
+    border-radius:50px;
+    padding:30px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 11;
+    margin: 0 10%;
+    width: 80%;
+    animation: 3s ease-out 3s 1 hidemessage;
+    animation-fill-mode: forwards;
+    pointer-events:none;
+}
+@keyframes hidemessage {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
