@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+            <?php if(!getenv("BPT_BUILDING")){?>
+            <!--We're not running in Makefile generation mode-->
+            <base href="../">
+            <?php }?>
             <?php include("../config.php");?>
             <title><?=$title?></title>
             <style>
