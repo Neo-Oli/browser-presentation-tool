@@ -7,3 +7,8 @@ A simple template for making a presentations in html/css. Uses a Makefile and PH
 4. Run `make`
 
 You can also directly open template/template.php in your browser, if you have a webserver running.
+
+# Demo
+
+https://glow.li/browser-presentation-tool-demo/
+
