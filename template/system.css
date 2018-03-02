@@ -31,18 +31,25 @@ footer{
 }
 
 .message{
-    background-color:rgba(100,100,100,0.9);
     border-radius:50px;
     padding:30px;
     position: fixed;
-    top: 50%;
     left: 0;
     z-index: 11;
     margin: 0 10%;
     width: 80%;
+}
+.message.info{
+    background-color:rgba(100,100,100,0.9);
+    top: 70%;
     animation: 3s ease-out 3s 1 hidemessage;
     animation-fill-mode: forwards;
     pointer-events:none;
+}
+.message.error{
+    background-color:rgba(100,0,0,0.9);
+    color:white;
+    top: 30%;
 }
 @keyframes hidemessage {
   0% {

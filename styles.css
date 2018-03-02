@@ -73,7 +73,6 @@ h1{
     font-size:2em;
 }
 .title{
-    text-align:center;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -85,5 +84,3 @@ h1{
     padding:0;
     width:100%;
 }
-
-

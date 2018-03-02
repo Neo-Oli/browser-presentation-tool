@@ -1,9 +1,10 @@
-<footer><?=$author?> | <?=$title?> | <?=$date?></footer>
+<footer><?=$author?> | <?=$title?> | <?=$date?> | Page <span class="data-pagenum"></span> of <span class="data-totalpages"></span>
+</footer>
+
 <section class="title nofooter">
     <h1><?=$title?></h1>
     <p><?=$author?></p>
     <p><?=$date?></p>
-
 </section>
 <section>
     This is the simplest possible slide
