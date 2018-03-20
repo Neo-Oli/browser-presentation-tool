@@ -10,8 +10,9 @@
 .next{
     right:0;
 }
-body{
+.js-loaded.browser-presentation-tool{
     overflow:hidden;
+    height:100vh;
 }
 section{
     height:100vh;
@@ -29,7 +30,20 @@ footer{
 *[data-order].visible{
     visibility:visible;
 }
+.no-js .message,
+.no-js .prev,
+.no-js .next
+{
+    display:none;
+}
 
+.no-js .data-pagenum:after,
+.no-js .data-totalpages:after{
+    content:"#";
+}
+.no-js *[data-order]{
+    visibility:visible;
+}
 .message{
     border-radius:50px;
     padding:30px;
@@ -52,10 +66,10 @@ footer{
     top: 30%;
 }
 @keyframes hidemessage {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
 }

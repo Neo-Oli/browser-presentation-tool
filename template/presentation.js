@@ -10,8 +10,19 @@ function findPos(obj) {
         return [curtop];
     }
 }
+function launchIntoFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
 function update(){
-    window.scroll(0,findPos(section));
+    container.scroll(0,findPos(section));
     slideparameter="?slide="+slidenum;
     animstateparameter="&";
     if(slidenum==0){
@@ -32,7 +43,7 @@ function updateData(){
 function setData(name, data){
 
     elements=document.querySelectorAll(".data-"+name)
-        for(i=0;i<elements.length;i++){
+    for(i=0;i<elements.length;i++){
         elements[i].innerHTML=data;
     };
 }
@@ -92,7 +103,12 @@ function next(){
     }
     update();
 }
-document.getElementById("nojs").style.display="none";
+container=document.querySelector(".browser-presentation-tool");
+container.classList.remove("no-js");
+container.classList.add("js-loaded");
+if(window.self !== window.top){
+    container.classList.add("iframed");
+}
 var sections=document.querySelectorAll('section');
 var targetslide=getvar("slide");
 if(!targetslide){
@@ -125,12 +141,15 @@ while(animstate<targetanimstate){
 update();
 
 document.addEventListener('keydown', function(e){
-    var nextkeys=new Array(32,34,39,40,13);
-    var prevkeys=new Array(33,8,37,38);
+    var nextkeys=[32,34,39,40,13];
+    var prevkeys=[33,8,37,38];
+    var fullscreenkeys=[70];
     if(nextkeys.includes(e.keyCode)){
         next();
     }else if(prevkeys.includes(e.keyCode)){
         prev();
+    }else if(fullscreenkeys.includes(e.keyCode)){
+        launchIntoFullscreen(container);
     }
 });
 //window.addEventListener('wheel', function(e) {

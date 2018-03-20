@@ -15,14 +15,15 @@
             </style>
     </head>
     <body>
-        <div id="nojs" class="message error">This is an interactive slideshow that only works with JavaScript. It doesn't send anything anywhere. Please enable Javascript to view this</div>
-        <div id="introduction" class="message info">Change slides with the arrow keys or by tapping the left and right side of the screen</div>
-        <?php include("../slides.php");?>
-        <a class="prev" href="javascript:prev()"></a>
-        <a class="next" href="javascript:next()"></a>
-        <script>
-            <?php include("presentation.js");?>
-        </script>
+        <div class="browser-presentation-tool no-js">
+            <div id="introduction" class="message info">Change slides with the arrow keys or by tapping the left and right side of the screen. Press F to enter full screen</div>
+            <?php include("../slides.php");?>
+            <a class="prev" href="javascript:prev()"></a>
+            <a class="next" href="javascript:next()"></a>
+            <script>
+                <?php include("presentation.js");?>
+            </script>
+        </div>
     </body>
 </html>
 
