@@ -20,6 +20,7 @@ section{
     /*space for footer*/
     height:calc(100vh - var(--footerHeight));
     margin-bottom: var(--footerHeight);
+    overflow-x:hidden;
 }
 footer{
     height:var(--footerHeight);
