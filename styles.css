@@ -8,15 +8,11 @@ footer{
     background-color:#222222;
     color:white;
     padding:5px;
-    position:fixed;
-    bottom:0px;
-    width:100%;
 }
 section{
     background-color:white;
 }
 body{
-    margin:0;
     font-size:20px;
     font-family:Sans-Serif;
 }

@@ -10,7 +10,10 @@
 </style>
             <title>Browser Presentation Tool - Demo Presentation</title>
             <style>
-                .prev,.next{
+                body{
+    margin:0;
+}
+.prev,.next{
     position:fixed;
     z-index:10000;
     height:100vh;
@@ -21,6 +24,11 @@
 }
 .next{
     right:0;
+}
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
 }
 .js-loaded.browser-presentation-tool{
     overflow:hidden;
@@ -96,15 +104,11 @@ footer{
     background-color:#222222;
     color:white;
     padding:5px;
-    position:fixed;
-    bottom:0px;
-    width:100%;
 }
 section{
     background-color:white;
 }
 body{
-    margin:0;
     font-size:20px;
     font-family:Sans-Serif;
 }
