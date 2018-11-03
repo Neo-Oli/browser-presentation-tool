@@ -22,6 +22,7 @@ footer{
     overflow:hidden;
     height:100vh;
 }
+
 section{
     height:100vh;
     overflow:auto;
@@ -45,6 +46,12 @@ footer{
 {
     display:none;
 }
+.no-js #nojs-warning{
+    display:block;
+}
+.js-loaded #nojs-warning{
+    display:none;
+}
 
 .no-js .data-pagenum:after,
 .no-js .data-totalpages:after{
@@ -61,18 +68,17 @@ footer{
     z-index: 11;
     margin: 0 10%;
     width: 80%;
+    animation: 1s ease-out 3s 1 hidemessage;
+    animation-fill-mode: forwards;
+    bottom: 10%;
+    pointer-events:none;
 }
 .message.info{
     background-color:rgba(100,100,100,0.9);
-    top: 70%;
-    animation: 3s ease-out 3s 1 hidemessage;
-    animation-fill-mode: forwards;
-    pointer-events:none;
 }
 .message.error{
     background-color:rgba(100,0,0,0.9);
     color:white;
-    top: 30%;
 }
 @keyframes hidemessage {
     0% {

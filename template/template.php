@@ -25,6 +25,7 @@ function img($path){
     <body>
         <div class="browser-presentation-tool no-js">
             <div id="introduction" class="message info">Change slides with the arrow keys or by tapping the left and right side of the screen. Press F to enter full screen</div>
+            <div id="nojs-warning" class="message error">You're running this slide without JavaScript. Certain thing like animations and page numbers will not work. Change to the next slide by scrolling.</div>
             <?php include("../slides.php");?>
             <a class="prev" href="javascript:prev()"></a>
             <a class="next" href="javascript:next()"></a>
