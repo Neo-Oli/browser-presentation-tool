@@ -4,4 +4,7 @@ index.html: slides.php styles.css config.php template/presentation.js template/s
 clean:
 	rm -f index.html
 
-.PHONY: install uninstall
+example: index.html
+	cp index.html example.html
+
+.PHONY: install uninstall exmaple
