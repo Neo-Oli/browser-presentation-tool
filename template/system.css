@@ -5,7 +5,7 @@ body{
     position:fixed;
     z-index:10000;
     height:100vh;
-    width:100px;
+    width:50vw;
     top:0;
     cursor:pointer;
     opacity:0;
