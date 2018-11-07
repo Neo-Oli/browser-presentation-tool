@@ -14,7 +14,9 @@ section{
 }
 body{
     font-size:20px;
+    hyphens:auto;
     font-family:Sans-Serif;
+    word-wrap:break-word;
 }
 section>*{
     padding-left:10vw;
