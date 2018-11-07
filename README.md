@@ -1,5 +1,5 @@
 # browser-presentation-tool
-A simple template for making a presentations in html/css. Uses a Makefile and PHP to pull it all together into a single file (+media).
+A simple template for making a presentations in html/css. Uses a Makefile and PHP to pull it all together into a single file.
 
 1. Edit the Settings in config.php
 2. Add slides in slides.php
@@ -10,5 +10,5 @@ You can also directly open template/template.php in your browser, if you have a 
 
 # Demo
 
-https://glow.li/browser-presentation-tool-demo/
+https://glow.li/media/projects/browser-presentation-tool/example.html
 
