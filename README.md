@@ -10,5 +10,5 @@ You can also directly open template/template.php in your browser, if you have a 
 
 # Demo
 
-https://glow.li/media/projects/browser-presentation-tool/example.html
+https://glow.li/media/projects/browser-presentation-tool/
 
