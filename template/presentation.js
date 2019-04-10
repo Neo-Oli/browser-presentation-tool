@@ -1,3 +1,4 @@
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later
 function getSection(num){
     return sections[num];
 }
@@ -152,11 +153,4 @@ document.addEventListener('keydown', function(e){
         launchIntoFullscreen(container);
     }
 });
-//window.addEventListener('wheel', function(e) {
-//if (e.deltaY < 0) {
-//prev();
-//}else if (e.deltaY > 0) {
-//next();
-//}
-//});
-//
+// @license-end
