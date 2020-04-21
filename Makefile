@@ -1,6 +1,7 @@
 index.html: slides.php styles.css config.php template/presentation.js template/system.css template/template.php Makefile
+	mkdir dist
 	cd template;\
-	BPT_BUILDING=true php ./template.php > ../index.html
+	BPT_BUILDING=true php ./template.php > ../dist/index.html
 clean:
-	rm -f index.html
+	rm -rf dist
 .PHONY: install uninstall

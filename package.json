@@ -1,0 +1,8 @@
+{
+  "name": "browser-presentation-tool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Neo-Oli/browser-presentation-tool.git",
+  "author": "Oliver Schmidhauser <oli@glow.li>",
+  "license": "GPLv3"
+}
