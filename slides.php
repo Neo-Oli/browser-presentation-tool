@@ -55,7 +55,7 @@
     <header>
         <h2>A Picture</h2>
     </header>
-    <img class="right" src="<?= img("elephant.jpg")?>">
+    <img class="right" src="<?= img("elephant.jpg")?>" alt="Example picture of an elephant">
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac auctor. Aenean risus libero, maximus eget sapien at, mollis aliquam dui. Nulla laoreet vehicula lorem non feugiat. Cras eu hendrerit mi, id euismod est. Etiam in ligula finibus, pharetra ligula placerat, aliquam neque. Nulla dapibus pulvinar facilisis. Integer ex orci, pretium quis sem a, sodales sodales nibh. Etiam blandit orci vitae leo fermentum auctor. Vestibulum feugiat tellus quis sollicitudin tincidunt. Ut tincidunt aliquet erat, nec mollis nunc accumsan quis. Sed ac libero vitae eros tempor sollicitudin. In placerat tincidunt dictum. Sed condimentum nulla magna. </p>
 </section>
 <section>
@@ -65,7 +65,7 @@
     <p>Click the edges to navigate on mobile</p>
 </section>
 <section class="nofooter">
-    <img class="fullscreen" src="<?= img("elephant.jpg")?>">
+    <img class="fullscreen" src="<?= img("elephant.jpg")?>" alt="Example picture of an elephant">
 </section>
 <section class="endslide">
     <h1>The End</h1>
