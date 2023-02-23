@@ -3,9 +3,6 @@
 }
 img{
     max-width:100%;
-    height: calc(100% - 150px);
-    margin: 0 auto;
-    display:block;
 }
 footer{
     background-color:#222222;
