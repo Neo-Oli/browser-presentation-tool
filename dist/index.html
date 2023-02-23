@@ -5,77 +5,89 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
                         <style>
     :root{
-        --footerHeight:100px;
+        --footer-height:100px;
     }
 </style>
 
             <title>Browser Presentation Tool - Demo Presentation</title>
             <style>
-                body{
-    margin:0;
-}
-.prev,.next{
-    position:fixed;
-    z-index:10000;
-    height:100vh;
-    width:50vw;
-    top:0;
-    cursor:pointer;
-    opacity:0;
-}
-.next{
-    right:0;
-}
-footer{
-    position:fixed;
-    bottom:0px;
-    width:100%;
-}
-.js-loaded.browser-presentation-tool{
-    overflow:hidden;
-    height:100vh;
+                body {
+    margin: 0;
 }
 
-section{
-    height:100vh;
-    overflow:auto;
-    /*space for footer*/
-    height:calc(100vh - var(--footerHeight));
-    margin-bottom: var(--footerHeight);
-    overflow-x:hidden;
+.prev,
+.next {
+    position: fixed;
+    z-index: 10000;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    cursor: pointer;
+    opacity: 0;
 }
-footer{
-    height:var(--footerHeight);
+
+.next {
+    right: 0;
 }
-*[data-order]{
-    visibility:hidden;
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-*[data-order].visible{
-    visibility:visible;
+
+.js-loaded.browser-presentation-tool {
+    overflow: hidden;
+    height: 100vh;
 }
+
+section {
+    overflow: auto;
+
+    /* space for footer */
+    height: calc(100vh - var(--footer-height));
+    margin-bottom: var(--footer-height);
+    overflow-x: hidden;
+}
+
+footer {
+    height: var(--footer-height);
+}
+
+*[data-order] {
+    visibility: hidden;
+}
+
+*[data-order].visible {
+    visibility: visible;
+}
+
 .no-js .message,
 .no-js .prev,
-.no-js .next
-{
-    display:none;
-}
-.no-js #nojs-warning{
-    display:block;
-}
-.js-loaded #nojs-warning{
-    display:none;
+.no-js .next {
+    display: none;
 }
 
-.no-js .data-pagenum:after,
-.no-js .data-totalpages:after{
-    content:"#";
+.no-js #nojs-warning {
+    display: block;
 }
-.no-js *[data-order]{
-    visibility:visible;
+
+.js-loaded #nojs-warning {
+    display: none;
 }
-.message{
-    border-radius:50px;
-    padding:30px;
+
+.no-js .data-pagenum::after,
+.no-js .data-totalpages::after {
+    content: "#";
+}
+
+.no-js *[data-order] {
+    visibility: visible;
+}
+
+.message {
+    border-radius: 50px;
+    padding: 30px;
     position: fixed;
     left: 0;
     z-index: 11;
@@ -84,117 +96,136 @@ footer{
     animation: 1s ease-out 3s 1 hidemessage;
     animation-fill-mode: forwards;
     bottom: 10%;
-    pointer-events:none;
+    pointer-events: none;
 }
-.message.info{
-    background-color:rgba(100,100,100,0.9);
+
+.message.info {
+    background-color: rgb(100 100 100 / 90%);
 }
-.message.error{
-    background-color:rgba(100,0,0,0.9);
-    color:white;
+
+.message.error {
+    background-color: rgb(100 0 0 / 90%);
+    color: white;
 }
+
 @keyframes hidemessage {
     0% {
-        opacity:1;
+        opacity: 1;
     }
+
     100% {
-        opacity:0;
+        opacity: 0;
     }
 }
-                *{
-    box-sizing:border-box;
+                * {
+    box-sizing: border-box;
 }
-img{
-    max-width:100%;
+
+img {
+    max-width: 100%;
 }
-footer{
-    background-color:#222222;
-    color:white;
-    padding:5px;
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 5px;
 }
-section{
-    background-color:white;
+
+section {
+    background-color: white;
 }
-body{
-    font-size:1.3vw;
-    hyphens:auto;
-    font-family:Sans-Serif;
-    word-wrap:break-word;
+
+body {
+    font-size: 1.3vw;
+    hyphens: auto;
+    font-family: sans-serif;
+    word-wrap: break-word;
 }
-section>*{
-    padding-left:10vw;
-    padding-right:10vw;
+
+section > * {
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
-h2{
-    text-align:center;
+
+h2 {
+    text-align: center;
 }
-.slide2{
-    background-color:#171717;
-    color:white;
+
+.slide2 {
+    background-color: #171717;
+    color: white;
 }
-.nofooter{
-    height:100vh;
-    margin-bottom:0px;
-    position:relative;
-    z-index:10;
+
+.nofooter {
+    height: 100vh;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10;
 }
-header{
-    background-color:#222222;
-    padding-top:5px;
-    padding-bottom:5px;
-    color:white;
-    position:relative;
-    margin-bottom:30px;
+
+header {
+    background-color: #222;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    position: relative;
+    margin-bottom: 30px;
 }
-header:after{
+
+header::after {
     height: 7px;
     width: 100%;
     display: block;
-    content:"";
-    left:0px;
-    bottom:-14px;
-    border-bottom:7px solid #aeaeae;
-    position:absolute;
+    content: "";
+    left: 0;
+    bottom: -14px;
+    border-bottom: 7px solid #aeaeae;
+    position: absolute;
 }
-img.right{
-    clear:right;
-    float:right;
-    margin:10px 0px 10px 10px;
+
+img.right {
+    clear: right;
+    float: right;
+    margin: 10px 0 10px 10px;
 }
-.endslide{
-    font-size:48px;
-    color:white;
-    background:black;
-    text-align:center;
+
+.endslide {
+    font-size: 48px;
+    color: white;
+    background: black;
+    text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-h1{
-    font-size:2em;
+
+h1 {
+    font-size: 2em;
 }
-.title{
+
+.title {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align:center;
-    background-color:rgb(159, 27, 27);
-    color:white;
+    text-align: center;
+    background-color: rgb(159 27 27);
+    color: white;
 }
-.fullscreen{
-    padding:0;
-    width:100%;
+
+.fullscreen {
+    padding: 0;
+    width: 100%;
 }
 
 table {
-  border-collapse: collapse;
-  border: 1px solid black; /* add a solid border around the table */
+    border-collapse: collapse;
+    border: 1px solid black; /* add a solid border around the table */
 }
 
-
-th,td{
-    border:1px solid black;
-    text-align:left;
+th,
+td {
+    border: 1px solid black;
+    text-align: left;
 }
             </style>
     </head>
@@ -278,160 +309,162 @@ th,td{
             <a class="next" href="javascript:next()">next slide</a>
 <script>
 // @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later
-function getSection(num){
-    return sections[num];
+const getSection = (num) => {
+    return sections[num]
 }
-function findPos(obj) {
-    var curtop = 0;
+const findPos = (obj) => {
+    let curtop = 0
     if (obj.offsetParent) {
         do {
-            curtop += obj.offsetTop;
-        } while (obj = obj.offsetParent);
-        return [curtop];
+            curtop += obj.offsetTop
+        } while ((obj = obj.offsetParent))
+        return [curtop]
     }
 }
-function launchIntoFullscreen(element) {
-  if(element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  } else if(element.msRequestFullscreen) {
-    element.msRequestFullscreen();
-  }
-}
-function update(){
-    container.scroll(0,findPos(section));
-    slideparameter="?slide="+slidenum;
-    animstateparameter="&";
-    if(slidenum==0){
-        slideparameter="";
-        animstateparameter="?";
+const launchIntoFullscreen = (element) => {
+    if (element.requestFullscreen) {
+        element.requestFullscreen()
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen()
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen()
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen()
     }
-    animstateparameter+="animstate="+animstate;
-    if(animstate==0){
-        animstateparameter="";
+}
+const update = () => {
+    container.scroll(0, findPos(section))
+    let slideparameter = `?slide=${slidenum}`
+    let animstateparameter = "&"
+    if (slidenum === 0) {
+        slideparameter = ""
+        animstateparameter = "?"
     }
-    window.history.replaceState(null,"Slide "+slidenum,location.pathname+slideparameter+animstateparameter);
-    updateData();
+    animstateparameter += `animstate=${animstate}`
+    if (animstate === 0) {
+        animstateparameter = ""
+    }
+    window.history.replaceState(
+        null,
+        `Slide ${slidenum}`,
+        location.pathname + slideparameter + animstateparameter
+    )
+    updateData()
 }
-function updateData(){
-    setData("pagenum", slidenum+1);
-    setData("totalpages", sections.length);
+const updateData = () => {
+    setData("pagenum", slidenum + 1)
+    setData("totalpages", sections.length)
 }
-function setData(name, data){
+const setData = (name, data) => {
+    const elements = document.querySelectorAll(`.data-${name}`)
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = data
+    }
+}
 
-    elements=document.querySelectorAll(".data-"+name)
-    for(i=0;i<elements.length;i++){
-        elements[i].innerHTML=data;
-    };
+const sortAnimItems = (nodelist) => {
+    let itemsArray = Array.prototype.slice.call(nodelist, 0)
+    itemsArray = itemsArray.sort((a, b) => {
+        return a.dataset.order > b.dataset.order
+    })
+    return itemsArray
 }
-
-function sortAnimItems(nodelist){
-    var itemsArray=Array.prototype.slice.call(nodelist, 0);
-    itemsArray=itemsArray.sort(function(a,b){
-        return a.dataset.order > b.dataset.order;
-    });
-    return itemsArray;
+const getvar = (name) => {
+    const get = `${unescape(window.location.search)}&`
+    const regex = new RegExp(`.*?[&\\?]${name}=(.*?)&.*`)
+    const value = get.replace(regex, "$1")
+    return value === get ? false : value
 }
-function getvar(name){
-    var get = unescape(window.location.search) + '&';
-    var regex = new RegExp('.*?[&\\?]' + name + '=(.*?)&.*');
-    value = get.replace(regex, "$1");
-    return value == get ? false : value;
-}
-function prev(){
-    items=section.querySelectorAll("*[data-order]");
-    if(items[animstate-1]){
-        var items=sortAnimItems(items);
-        var cur=items[animstate-1];
-        cur.classList.remove("visible");
-        animstate-=1;
-    }else{
-        slidenum-=1;
-        var updateanim=true;
-        if(slidenum<0){
-            slidenum=0
-            animstate=0;
-            updateanim=false;
-
+const prev = () => {
+    let items = section.querySelectorAll("*[data-order]")
+    if (items[animstate - 1]) {
+        items = sortAnimItems(items)
+        const cur = items[animstate - 1]
+        cur.classList.remove("visible")
+        animstate -= 1
+    } else {
+        slidenum -= 1
+        let updateanim = true
+        if (slidenum < 0) {
+            slidenum = 0
+            animstate = 0
+            updateanim = false
         }
-        section=getSection(slidenum);
-        if(updateanim){
-            items=section.querySelectorAll("*[data-order]");
-            animstate=items.length;
-        }
-    }
-    update();
-}
-function next(){
-    items=section.querySelectorAll("*[data-order]");
-    if(items[animstate]){
-        var items=sortAnimItems(items);
-        var cur=items[animstate];
-        cur.classList.add("visible");
-        animstate+=1;
-    }else{
-        slidenum+=1;
-        animstate=0;
-        section=getSection(slidenum);
-        if(!section){
-            slidenum-=1;
-            section=getSection(slidenum);
+        section = getSection(slidenum)
+        if (updateanim) {
+            items = section.querySelectorAll("*[data-order]")
+            animstate = items.length
         }
     }
-    update();
+    update()
 }
-container=document.querySelector(".browser-presentation-tool");
-container.classList.remove("no-js");
-container.classList.add("js-loaded");
-if(window.self !== window.top){
-    container.classList.add("iframed");
-}
-var sections=document.querySelectorAll('section');
-var targetslide=getvar("slide");
-if(!targetslide){
-    targetslide=0;
-}
-var targetanimstate=getvar("animstate");
-if(!targetanimstate){
-    targetanimstate=0;
-}
-var slidenum=0
-var animstate=0
-var section=getSection(slidenum);
-while(slidenum<targetslide){
-    next();
-    if(slidenum>=sections.length-1){
-        targetslide=slidenum;
-    }
-}
-while(animstate<targetanimstate){
-    var items=section.querySelectorAll("*[data-order]");
-    if(targetanimstate>=items.length){
-        targetanimstate=items.length-1;
-        if(targetanimstate<0){
-            targetanimstate=0;
+const next = () => {
+    let items = section.querySelectorAll("*[data-order]")
+    if (items[animstate]) {
+        items = sortAnimItems(items)
+        const cur = items[animstate]
+        cur.classList.add("visible")
+        animstate += 1
+    } else {
+        slidenum += 1
+        animstate = 0
+        section = getSection(slidenum)
+        if (!section) {
+            slidenum -= 1
+            section = getSection(slidenum)
         }
-    }else{
-        next();
+    }
+    update()
+}
+const container = document.querySelector(".browser-presentation-tool")
+container.classList.remove("no-js")
+container.classList.add("js-loaded")
+if (window.self !== window.top) {
+    container.classList.add("iframed")
+}
+const sections = document.querySelectorAll("section")
+let targetslide = getvar("slide")
+if (!targetslide) {
+    targetslide = 0
+}
+let targetanimstate = getvar("animstate")
+if (!targetanimstate) {
+    targetanimstate = 0
+}
+let slidenum = 0
+let animstate = 0
+let section = getSection(slidenum)
+while (slidenum < targetslide) {
+    next()
+    if (slidenum >= sections.length - 1) {
+        targetslide = slidenum
     }
 }
-update();
-
-document.addEventListener('keydown', function(e){
-    var nextkeys=[32,34,39,40,13];
-    var prevkeys=[33,8,37,38];
-    var fullscreenkeys=[70];
-    if(nextkeys.includes(e.keyCode)){
-        next();
-    }else if(prevkeys.includes(e.keyCode)){
-        prev();
-    }else if(fullscreenkeys.includes(e.keyCode)){
-        launchIntoFullscreen(container);
+while (animstate < targetanimstate) {
+    const items = section.querySelectorAll("*[data-order]")
+    if (targetanimstate >= items.length) {
+        targetanimstate = items.length - 1
+        if (targetanimstate < 0) {
+            targetanimstate = 0
+        }
+    } else {
+        next()
     }
-});
+}
+update()
+
+document.addEventListener("keydown", (e) => {
+    const nextkeys = [32, 34, 39, 40, 13]
+    const prevkeys = [33, 8, 37, 38]
+    const fullscreenkeys = [70]
+    if (nextkeys.includes(e.keyCode)) {
+        next()
+    } else if (prevkeys.includes(e.keyCode)) {
+        prev()
+    } else if (fullscreenkeys.includes(e.keyCode)) {
+        launchIntoFullscreen(container)
+    }
+})
 // @license-end
 </script>
         </div>
