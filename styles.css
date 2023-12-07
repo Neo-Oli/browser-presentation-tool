@@ -46,42 +46,38 @@ h2 {
 
 header {
     background-color: var(--main-color);
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     color: white;
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 header::after {
-    height: 0.3em;
+    height: 0.3rem;
     width: 100%;
     display: block;
     content: "";
     left: 0;
-    bottom: -0.7em;
-    border-bottom: 0.3em solid var(--sub-color);
+    bottom: -0.7rem;
+    border-bottom: 0.3rem solid var(--sub-color);
     position: absolute;
 }
 
 img.right {
     clear: right;
     float: right;
-    margin: 1em 0 1em 1em;
+    margin: 1rem 0 1rem 1rem;
 }
 
 .endslide {
-    font-size: 3em;
+    font-size: 4rem;
     color: white;
     background: black;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-h1 {
-    font-size: 2em;
 }
 
 .title {
@@ -100,11 +96,11 @@ h1 {
 
 table {
     border-collapse: collapse;
-    border: 0.2em solid black; /* add a solid border around the table */
+    border: 0.2rem solid black; /* add a solid border around the table */
 }
 
 th,
 td {
-    border: 0.2em solid black;
+    border: 0.2rem solid black;
     text-align: left;
 }

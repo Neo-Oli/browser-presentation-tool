@@ -70,8 +70,8 @@ section {
 }
 
 .message {
-    border-radius: 3em;
-    padding: 2em;
+    border-radius: 3rem;
+    padding: 2rem;
     position: fixed;
     left: 0;
     z-index: 11;

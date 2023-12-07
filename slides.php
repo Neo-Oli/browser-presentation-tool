@@ -71,5 +71,5 @@ END); ?>
     <img class="fullscreen" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">
 </section>
 <section class="endslide">
-    <h1>The End</h1>
+    <h2>The End</h2>
 </section>
