@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
                         <style>
     :root{
-        --footer-height:100px;
+        --footer-height: 4em;
+        --main-color: #222222;
+        --sub-color: #aeaeae;
+        --title-color: rgb(159 27 27)
     }
 </style>
 
@@ -34,6 +37,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: var(--footer-height);
 }
 
 .js-loaded.browser-presentation-tool {
@@ -48,10 +52,6 @@ section {
     height: calc(100vh - var(--footer-height));
     margin-bottom: var(--footer-height);
     overflow-x: hidden;
-}
-
-footer {
-    height: var(--footer-height);
 }
 
 *[data-order] {
@@ -251,10 +251,8 @@ td {
 <section class="nofooter">
     This slide has no footer
 </section>
-<section>
-    <h2>This slide has more formating</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien. Aliquam sed volutpat ex. Integer augue mauris, scelerisque ac est ac, pharetra auctor nulla. Phasellus vitae sodales leo. Donec eget fringilla mi, et fermentum quam. Nulla pretium vulputate orci, et venenatis diam vehicula eu. Donec malesuada purus eu arcu dignissim luctus. Cras suscipit purus urna. Praesent quis purus sodales, iaculis turpis eget, suscipit dolor. Cras eget eros dapibus, tristique metus quis, suscipit arcu. Donec eget felis ut quam laoreet congue. </p>
-</section>
+<section><h2>This slide has more formatting</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien. Aliquam sed volutpat ex. Integer augue mauris, scelerisque ac est ac, pharetra auctor nulla. Phasellus vitae sodales leo. Donec eget fringilla mi, et fermentum quam. Nulla pretium vulputate orci, et venenatis diam vehicula eu. Donec malesuada purus eu arcu dignissim luctus. Cras suscipit purus urna. Praesent quis purus sodales, iaculis turpis eget, suscipit dolor. Cras eget eros dapibus, tristique metus quis, suscipit arcu. Donec eget felis ut quam laoreet congue.</p></section>
 <section>
     <header>
         <h2>This slide has a better header</h2>

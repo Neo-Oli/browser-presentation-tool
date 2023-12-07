@@ -1,10 +1,16 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
 function img($path) {
     $type = pathinfo($path, \PATHINFO_EXTENSION);
     $data = file_get_contents('../' . $path);
     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
     return $base64;
+}
+function md($markdown) {
+    $Parsedown = new Parsedown();
+
+    return $Parsedown->text($markdown);
 }
 ?>
 <!DOCTYPE html>

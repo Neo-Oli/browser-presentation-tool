@@ -21,6 +21,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: var(--footer-height);
 }
 
 .js-loaded.browser-presentation-tool {
@@ -35,10 +36,6 @@ section {
     height: calc(100vh - var(--footer-height));
     margin-bottom: var(--footer-height);
     overflow-x: hidden;
-}
-
-footer {
-    height: var(--footer-height);
 }
 
 *[data-order] {

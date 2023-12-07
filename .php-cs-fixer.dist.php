@@ -32,6 +32,8 @@ return $config
         'use_arrow_functions' => false,
         'blank_line_before_statement' => ['statements' => ['return']],
         'no_useless_sprintf' => true,
+        'psr_autoloading' => false,
+        'no_closing_tag' => false,
         'class_attributes_separation' => [
             'elements' => [
                 'const' => 'one',
@@ -56,11 +58,9 @@ return $config
                 'use',
             ],
         ],
-        'braces' => [
-            'position_after_functions_and_oop_constructs' => 'same',
-            'allow_single_line_closure' => true,
-            'position_after_control_structures' => 'same',
-            'position_after_anonymous_constructs' => 'same',
+        'braces_position' => [
+            'classes_opening_brace' => 'same_line',
+            'functions_opening_brace' => 'same_line',
         ],
     ])
     ->setFinder($finder)

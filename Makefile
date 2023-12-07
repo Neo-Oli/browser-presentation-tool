@@ -1,4 +1,4 @@
-index.html: slides.php styles.css config.php template/presentation.js template/system.css template/template.php Makefile
+index.html: slides.php styles.css config.php template/presentation.js template/system.css template/template.php Makefile vendor/autoload.php
 	mkdir -p dist
 	cd template;\
 	BPT_BUILDING=true php ./template.php > ../dist/index.html
