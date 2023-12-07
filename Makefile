@@ -3,7 +3,7 @@ index.html: slides.php styles.css config.php template/presentation.js template/s
 	cd template;\
 	BPT_BUILDING=true php ./template.php > ../dist/index.html
 
-vendor/autoload.php:
+vendor/autoload.php: composer.json composer.lock
 	composer install
 clean:
 	rm -rf dist node_modules vendor
