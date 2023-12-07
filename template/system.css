@@ -73,8 +73,8 @@ footer {
 }
 
 .message {
-    border-radius: 50px;
-    padding: 30px;
+    border-radius: 3em;
+    padding: 2em;
     position: fixed;
     left: 0;
     z-index: 11;
@@ -87,11 +87,12 @@ footer {
 }
 
 .message.info {
-    background-color: rgb(100 100 100 / 90%);
+    background-color: rgb(100 100 100 / 80%);
+    color: white;
 }
 
 .message.error {
-    background-color: rgb(100 0 0 / 90%);
+    background-color: rgb(100 0 0 / 80%);
     color: white;
 }
 
