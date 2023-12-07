@@ -8,7 +8,7 @@ function img($path) {
     return $base64;
 }
 function md($markdown) {
-    $Parsedown = new Parsedown();
+    $Parsedown = new ParsedownExtra();
 
     return $Parsedown->text($markdown);
 }
