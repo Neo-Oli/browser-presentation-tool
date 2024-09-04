@@ -112,6 +112,7 @@ pre.animationcode {
     color: white;
     display: block;
     padding: 0.2em;
+    overflow: scroll;
     padding-bottom: 2rem;
 }
 
