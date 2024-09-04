@@ -12,7 +12,7 @@ node_modules:
 	pnpm install
 
 lint: vendor/autoload.php node_modules
-	pnpm eslint . --cache --color --ext js,jsx,ts,tsx --fix
+	pnpm eslint . --cache --color --fix
 	pnpm stylelint --fix "**/*.{css,scss,sass}"
 	PHP_CS_FIXER_IGNORE_ENV=1 $(PHP) vendor/bin/php-cs-fixer fix --show-progress=dots -vv
 .PHONY: install uninstall lint
