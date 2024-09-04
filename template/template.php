@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
+error_reporting(\E_ALL ^ \E_DEPRECATED);
 function img($path) {
     $type = pathinfo($path, \PATHINFO_EXTENSION);
     $data = file_get_contents('../' . $path);

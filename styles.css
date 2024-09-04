@@ -2,8 +2,15 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 img {
     max-width: 100%;
+    max-height: calc(100vh - 12em);
+    margin: 0 auto;
+    display: block;
 }
 
 footer {
@@ -62,12 +69,19 @@ h2::after {
     position: absolute;
 }
 
+strong {
+    color: var(--title-color);
+}
+
+em {
+    color: var(--second-color);
+}
+
 img.right {
     clear: right;
     float: right;
-    width: 35%;
-    margin: 1rem 0 1rem 1rem;
-    padding: 1rem;
+    max-width: 35%;
+    margin: 0 0 1rem 1rem;
 }
 
 .endslide {
@@ -80,12 +94,32 @@ img.right {
     flex-direction: column;
 }
 
+li {
+    padding-bottom: 0.5em;
+}
+
 .endslide h2 {
     background: none;
 }
 
 .endslide h2::after {
     display: none;
+}
+
+pre > code,
+pre.animationcode {
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 0.2em;
+    padding-bottom: 2rem;
+}
+
+code {
+    background-color: #ddd;
+    border: 0.05em solid #aaa;
+    border-radius: 0.2em;
+    padding: 0.1em;
 }
 
 .title {
@@ -100,6 +134,7 @@ img.right {
 .fullscreen {
     padding: 0;
     width: 100%;
+    max-height: 100%;
 }
 
 table {

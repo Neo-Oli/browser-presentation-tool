@@ -62,6 +62,41 @@ END); ?>
 <section class="nofooter">
     <img class="fullscreen" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">
 </section>
+
+<section><?= md(<<<END
+## Slide with code
+
+```
+$ git push origin olis-cool-feature
+Username for 'https://github.com': neo-oli
+Password for 'https://neo-oli@github.com':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'olis-cool-feature' on GitHub by visiting:
+remote:      https://github.com/swissredcross/beispiel-repository/pull/new/olis-cool-feature
+remote:
+To https://github.com/swissredcross/beispiel-repository.git
+ * [new branch]      olis-cool-feature -> olis-cool-feature
+$
+```
+
+END); ?></section>
+<section><?= md(<<<END
+## Slide with animated code
+
+<div>
+    <pre class="animationcode">
+$ git init mein-beispiel-repository
+<span data-order="1">Initialized empty Git repository in /home/glow/mein-beispiel-repository/.git/
+$ </span><span data-order="2">cd mein-beispiel-repository
+$ </span><span data-order="3">pwd
+</span><span data-order="4">/home/oli/mein-beispiel-repository
+$ </span>
+</pre>
+</div>
+
+END); ?>
+</section>
 <section class="endslide">
     <h2>The End</h2>
 </section>
