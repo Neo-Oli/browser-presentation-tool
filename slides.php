@@ -22,29 +22,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien
 
 END); ?>
 </section>
-<section>
-    <header>
-        <h2>This slide has a better header</h2>
-    </header>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien. Aliquam sed volutpat ex. Integer augue mauris, scelerisque ac est ac, pharetra auctor nulla. Phasellus vitae sodales leo. Donec eget fringilla mi, et fermentum quam. Nulla pretium vulputate orci, et venenatis diam vehicula eu. Donec malesuada purus eu arcu dignissim luctus. Cras suscipit purus urna. Praesent quis purus sodales, iaculis turpis eget, suscipit dolor. Cras eget eros dapibus, tristique metus quis, suscipit arcu. Donec eget felis ut quam laoreet congue. </p>
+<section><?= md(<<<END
+## List
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+- Item 5
+- Item 6
+END); ?>
 </section>
 <section>
-    <header>
-        <h2>List</h2>
-    </header>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-        <li>Item 6</li>
-    </ul>
-</section>
-<section>
-    <header>
         <h2>Animated List</h2>
-    </header>
     <ul>
         <li data-order="1">Item 1</li>
         <li data-order="2">Item 2</li>
@@ -54,18 +43,21 @@ END); ?>
         <li data-order="6">Item 6</li>
     </ul>
 </section>
-<section>
-    <header>
-        <h2>A Picture</h2>
-    </header>
-    <img class="right" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac auctor. Aenean risus libero, maximus eget sapien at, mollis aliquam dui. Nulla laoreet vehicula lorem non feugiat. Cras eu hendrerit mi, id euismod est. Etiam in ligula finibus, pharetra ligula placerat, aliquam neque. Nulla dapibus pulvinar facilisis. Integer ex orci, pretium quis sem a, sodales sodales nibh. Etiam blandit orci vitae leo fermentum auctor. Vestibulum feugiat tellus quis sollicitudin tincidunt. Ut tincidunt aliquet erat, nec mollis nunc accumsan quis. Sed ac libero vitae eros tempor sollicitudin. In placerat tincidunt dictum. Sed condimentum nulla magna. </p>
+<section><?= md(<<<END
+## A picture
+
+![Example picture of an elephant](<?= img('elephant.jpg'); ?>){.right}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac auctor. Aenean risus libero, maximus eget sapien at, mollis aliquam dui. Nulla laoreet vehicula lorem non feugiat. Cras eu hendrerit mi, id euismod est. Etiam in ligula finibus, pharetra ligula placerat, aliquam neque. Nulla dapibus pulvinar facilisis. Integer ex orci, pretium quis sem a, sodales sodales nibh. Etiam blandit orci vitae leo fermentum auctor. Vestibulum feugiat tellus quis sollicitudin tincidunt. Ut tincidunt aliquet erat, nec mollis nunc accumsan quis. Sed ac libero vitae eros tempor sollicitudin. In placerat tincidunt dictum. Sed condimentum nulla magna.
+
+END); ?>
 </section>
-<section>
-    <header>
-        <h2>Responsive Design</h2>
-    </header>
-    <p>Click the edges to navigate on mobile</p>
+<section><?= md(<<<END
+## Responsive Design
+
+Click the edges to navigate on mobile
+
+END); ?>
 </section>
 <section class="nofooter">
     <img class="fullscreen" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">

@@ -28,10 +28,6 @@ section > * {
     padding-right: 10vw;
 }
 
-h2 {
-    text-align: center;
-}
-
 .slide2 {
     background-color: #171717;
     color: white;
@@ -44,16 +40,18 @@ h2 {
     z-index: 10;
 }
 
-header {
+h2 {
+    text-align: center;
     background-color: var(--main-color);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: white;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
 }
 
-header::after {
+h2::after {
     height: 0.3rem;
     width: 100%;
     display: block;
@@ -80,6 +78,14 @@ img.right {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.endslide h2 {
+    background: none;
+}
+
+.endslide h2::after {
+    display: none;
 }
 
 .title {

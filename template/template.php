@@ -9,8 +9,11 @@ function img($path) {
 }
 function md($markdown) {
     $Parsedown = new ParsedownExtra();
+    ob_start();
+    eval('?>' . $markdown);
+    $parsedOutput = ob_get_clean(); // Get the contents of the output buffer
 
-    return $Parsedown->text($markdown);
+    return $Parsedown->text($parsedOutput);
 }
 ?>
 <!DOCTYPE html>
