@@ -94,6 +94,20 @@ img.right {
     flex-direction: column;
 }
 
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "→";
+    position: absolute;
+    left: -2em;
+}
+
+.visible.replace:not(.active) {
+    display: none;
+}
+
 li {
     padding-bottom: 0.5em;
 }

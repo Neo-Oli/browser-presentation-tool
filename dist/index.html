@@ -240,6 +240,20 @@ img.right {
     flex-direction: column;
 }
 
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "→";
+    position: absolute;
+    left: -2em;
+}
+
+.visible.replace:not(.active) {
+    display: none;
+}
+
 li {
     padding-bottom: 0.5em;
 }
@@ -336,7 +350,8 @@ td {
         <li data-order="3">Item 3</li>
         <li data-order="5">Item 4, but the fifth to display</li>
         <li data-order="4">Item 5, but the fourth to display</li>
-        <li data-order="6">Item 6</li>
+        <li class="replace" data-order="6">Item 6</li>
+        <li data-order="7">Item 7, but it replaces item 6</li>
     </ul>
 </section>
 <section><h2>A picture</h2>
@@ -448,8 +463,13 @@ const prev = () => {
     let items = section.querySelectorAll("*[data-order]")
     if (items[animstate - 1]) {
         items = sortAnimItems(items)
-        const cur = items[animstate - 1]
-        cur.classList.remove("visible")
+        for (const item in items) {
+            items[item].classList.remove("active")
+        }
+        const last = items[animstate - 1]
+        last.classList.remove("visible")
+        const cur = items[animstate - 2]
+        cur.classList.add("active")
         animstate -= 1
     } else {
         slidenum -= 1
@@ -471,8 +491,12 @@ const next = () => {
     let items = section.querySelectorAll("*[data-order]")
     if (items[animstate]) {
         items = sortAnimItems(items)
+        for (const item in items) {
+            items[item].classList.remove("active")
+        }
         const cur = items[animstate]
         cur.classList.add("visible")
+        cur.classList.add("active")
         animstate += 1
     } else {
         slidenum += 1

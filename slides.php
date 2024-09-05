@@ -40,7 +40,8 @@ END); ?>
         <li data-order="3">Item 3</li>
         <li data-order="5">Item 4, but the fifth to display</li>
         <li data-order="4">Item 5, but the fourth to display</li>
-        <li data-order="6">Item 6</li>
+        <li class="replace" data-order="6">Item 6</li>
+        <li data-order="7">Item 7, but it replaces item 6</li>
     </ul>
 </section>
 <section><?= md(<<<END

@@ -69,8 +69,13 @@ const prev = () => {
     let items = section.querySelectorAll("*[data-order]")
     if (items[animstate - 1]) {
         items = sortAnimItems(items)
-        const cur = items[animstate - 1]
-        cur.classList.remove("visible")
+        for (const item in items) {
+            items[item].classList.remove("active")
+        }
+        const last = items[animstate - 1]
+        last.classList.remove("visible")
+        const cur = items[animstate - 2]
+        cur.classList.add("active")
         animstate -= 1
     } else {
         slidenum -= 1
@@ -92,8 +97,12 @@ const next = () => {
     let items = section.querySelectorAll("*[data-order]")
     if (items[animstate]) {
         items = sortAnimItems(items)
+        for (const item in items) {
+            items[item].classList.remove("active")
+        }
         const cur = items[animstate]
         cur.classList.add("visible")
+        cur.classList.add("active")
         animstate += 1
     } else {
         slidenum += 1
