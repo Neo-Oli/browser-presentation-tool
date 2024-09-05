@@ -75,7 +75,9 @@ const prev = () => {
         const last = items[animstate - 1]
         last.classList.remove("visible")
         const cur = items[animstate - 2]
-        cur.classList.add("active")
+        if (cur) {
+            cur.classList.add("active")
+        }
         animstate -= 1
     } else {
         slidenum -= 1
