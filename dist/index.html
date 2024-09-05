@@ -402,7 +402,7 @@ const findPos = (obj) => {
         do {
             curtop += obj.offsetTop
         } while ((obj = obj.offsetParent))
-            return [curtop]
+        return [curtop]
     }
 }
 const launchIntoFullscreen = (element) => {
@@ -469,7 +469,7 @@ const prev = () => {
         const last = items[animstate - 1]
         last.classList.remove("visible")
         const cur = items[animstate - 2]
-        if(cur){
+        if (cur) {
             cur.classList.add("active")
         }
         animstate -= 1
