@@ -194,7 +194,7 @@ section {
 }
 
 body {
-    font-size: 18px;
+    font-size: 20px;
     hyphens: auto;
     font-family: sans-serif;
     word-wrap: break-word;
@@ -324,23 +324,25 @@ td {
 .hugeleft {
     font-size: 3em;
 }
+
 .huge {
     font-size: 3em;
     text-align: center;
 }
+
 .stamp {
     color: red;
     position: absolute;
     top: 3em;
-    right: 0em;
+    right: 0;
     z-index: 1;
     font-size: 2em;
     transform: rotate(45deg);
-
 }
 
-a,a:visited{
-color: white;
+a,
+a:visited {
+    color: white;
 }
             </style>
     </head>
@@ -368,8 +370,8 @@ color: white;
 <li>Installing software</li>
 <li>Service management</li>
 <li>Access Termux via USB</li>
-<li>Termux: API</li>
-<li>What am I doing?</li>
+<li>What makes Termux special?</li>
+<li>What am I doing with Termux?</li>
 </ul></section>
 
 
@@ -412,23 +414,6 @@ color: white;
 </div>
 <div data-order="2" class="huge">
 <p><strong>apt</strong>, basically</p>
-</div></section>
-
-
-
-
-
-
-
-<section><h2>Installing software</h2>
-<div class="center">
-<div data-order="1" class="huge">
-<p>pkg? apt?</p>
-</div>
-
-<div data-order="2" class="huge">
-<p><strong>apt</strong>, basically</p>
-</div>
 </div></section>
 
 
@@ -491,10 +476,10 @@ color: white;
 
 
 
-<section><div data-order="1" class="huge">
+<section><div class="huge">
 <p>No <strong>systemd</strong> here!</p>
 </div>
-<div data-order="2" class="huge">
+<div data-order="1" class="huge">
 <p>Based on <strong>runit</strong>?</p>
 </div></section>
 
@@ -587,19 +572,20 @@ run: sshd: (pid 10436) 140s; run: log: (pid 27794) 533s</code></pre></li>
 <div data-order="4">
 <ol start="4">
 <li>Authenticate for the first time
-<pre><code class="language-bash">
-~ $ passwd
+<pre><code class="language-bash">~ $ passwd
 New password:
 Retype new password:
 New password was successfully set.</code></pre></li>
 </ol>
-<pre><code></code></pre>
 </div></section>
 
 
 
 
 
+<section><h2>Mount phone storage via sshfs</h2>
+<h3>Access Termux via USB</h3>
+<pre><code class="language-bash">glow@stinkpad:~$ sshfs localhost:/ $HOME/droid -o allow_other -p 8022</code></pre></section>
 
 
 
@@ -779,6 +765,17 @@ chmod o=rx $sdcard/drive</code></pre></section>
 </ul></section>
 
 
+<section><div class="huge">
+<p>Summary</p>
+</div></section>
+
+<section><div class="huge">
+<p>Conclusion</p>
+</div></section>
+
+<section><div class="huge">
+<p>Questions?</p>
+</div></section>
 
 <section class="endslide">
     <h2>The End</h2>

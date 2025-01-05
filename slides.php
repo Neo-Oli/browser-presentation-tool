@@ -18,9 +18,8 @@
 - Installing software
 - Service management
 - Access Termux via USB
-- Termux: API
-- What am I doing?
-
+- What makes Termux special?
+- What am I doing with Termux?
 
 
 END); ?></section>
@@ -72,23 +71,6 @@ END); ?></section>
 
 
 <div data-order="2" class="huge" markdown="1">__apt__, basically</div>
-
-END); ?></section>
-
-
-
-
-
-
-
-<section><?= md(<<<END
-## Installing software
-<div class="center">
-<div data-order="1" class="huge" markdown="1">pkg? apt?</div>
-
-
-<div data-order="2" class="huge" markdown="1">__apt__, basically</div>
-</div>
 
 END); ?></section>
 
@@ -183,9 +165,9 @@ END); ?></section>
 
 <section><?= md(<<<END
 
-<div data-order="1" class="huge" markdown="1">No __systemd__ here!</div>
+<div  class="huge" markdown="1">No __systemd__ here!</div>
 
-<div data-order="2" class="huge" markdown="1">Based on __runit__?</div>
+<div data-order="1" class="huge" markdown="1">Based on __runit__?</div>
 
 END); ?></section>
 
@@ -294,7 +276,6 @@ glow@stinkpad:~$ ssh localhost -p 8022
 New password:
 Retype new password:
 New password was successfully set.
-
 ```
 </div>
 END); ?></section>
@@ -303,6 +284,14 @@ END); ?></section>
 
 
 
+<section><?= md(<<<END
+## Mount phone storage via sshfs
+### Access Termux via USB
+```bash
+glow@stinkpad:~$ sshfs localhost:/ \$HOME/droid -o allow_other -p 8022
+```
+
+END); ?></section>
 
 
 
@@ -578,6 +567,23 @@ END); ?></section>
 END); ?></section>
 
 
+<section><?= md(<<<END
+
+<div class="huge" markdown="1">Summary</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+
+<div class="huge" markdown="1">Conclusion</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+
+<div class="huge" markdown="1">Questions?</div>
+
+END); ?></section>
 
 <section class="endslide">
     <h2>The End</h2>
