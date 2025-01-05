@@ -6,13 +6,79 @@
     <p><?= $author; ?></p>
   2025-01-05  <p><?= $date; ?></p>
 </section>
+
+
+
+
+
+
 <section><?= md(<<<END
 ## Agenda
 - What even is Termux?
 - Installing software
 - Service management
+- Access Termux via USB
+- Termux: API
+- What am I doing?
+
+
 
 END); ?></section>
+
+
+
+
+
+
+
+<section><?= md(<<<END
+## What even is Termux?
+
+![Screenshot of Termux](<?= img('termux-screenshot.png'); ?>)
+
+END); ?></section>
+
+
+<section><?= md(<<<END
+## What even is Termux?
+
+<div data-order="1" class="hugeleft" markdown="1">Terminal Emulator</div>
+<div data-order="2" markdown="1">
+Which pretty good, but boring!
+</div>
+<div data-order="3" class="hugeleft" markdown="1">Linux Environment</div>
+<div data-order="4" markdown="1">
+This is the neat thing!
+</div>
+
+
+END); ?></section>
+
+
+<section><?= md(<<<END
+
+<div class="huge" markdown="1">Install from __F-Droid__ not Google Play for the moment</div>
+
+END); ?></section>
+
+
+
+
+
+
+<section><?= md(<<<END
+## Installing software
+<div data-order="1" class="huge" markdown="1">pkg? apt?</div>
+
+
+<div data-order="2" class="huge" markdown="1">__apt__, basically</div>
+
+END); ?></section>
+
+
+
+
+
 
 
 <section><?= md(<<<END
@@ -25,6 +91,12 @@ END); ?></section>
 </div>
 
 END); ?></section>
+
+
+
+
+
+
 <section><?= md(<<<END
 ## Installing software
 
@@ -46,6 +118,12 @@ It does 3 things:
 
 END); ?></section>
 
+
+
+
+
+
+
 <section><?= md(<<<END
 ## Installing software
 
@@ -66,6 +144,24 @@ But remember to run `apt update` first and occasionally.
 
 END); ?></section>
 
+<section><?= md(<<<END
+## Installing software
+
+### Programming language specific package managers
+
+```bash
+~ $ pip install beets
+```
+
+```bash
+~ $ npm install -g mapscii
+```
+
+```bash
+~ $ cargo install viu
+```
+
+END); ?></section>
 
 
 
@@ -79,6 +175,12 @@ END); ?></section>
 
 
 
+
+
+
+
+
+
 <section><?= md(<<<END
 
 <div data-order="1" class="huge" markdown="1">No __systemd__ here!</div>
@@ -86,6 +188,11 @@ END); ?></section>
 <div data-order="2" class="huge" markdown="1">Based on __runit__?</div>
 
 END); ?></section>
+
+
+
+
+
 
 <section><?= md(<<<END
 ## Service Management
@@ -195,60 +302,144 @@ END); ?></section>
 
 
 
-<section><?= md(<<<END
-## A picture
 
-![Example picture of an elephant](<?= img('elephant.jpg'); ?>){.right}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac auctor. Aenean risus libero, maximus eget sapien at, mollis aliquam dui. Nulla laoreet vehicula lorem non feugiat. Cras eu hendrerit mi, id euismod est. Etiam in ligula finibus, pharetra ligula placerat, aliquam neque. Nulla dapibus pulvinar facilisis. Integer ex orci, pretium quis sem a, sodales sodales nibh. Etiam blandit orci vitae leo fermentum auctor. Vestibulum feugiat tellus quis sollicitudin tincidunt. Ut tincidunt aliquet erat, nec mollis nunc accumsan quis. Sed ac libero vitae eros tempor sollicitudin. In placerat tincidunt dictum. Sed condimentum nulla magna.
 
-END); ?>
-</section>
-<section><?= md(<<<END
-## Responsive Design
-
-Click the edges to navigate on mobile
-
-END); ?>
-</section>
-<section class="nofooter">
-    <img class="fullscreen" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">
-</section>
 
 <section><?= md(<<<END
-## Slide with code
 
-```
-$ git push origin olis-cool-feature
-Username for 'https://github.com': neo-oli
-Password for 'https://neo-oli@github.com':
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote:
-remote: Create a pull request for 'olis-cool-feature' on GitHub by visiting:
-remote:      https://github.com/swissredcross/beispiel-repository/pull/new/olis-cool-feature
-remote:
-To https://github.com/swissredcross/beispiel-repository.git
- * [new branch]      olis-cool-feature -> olis-cool-feature
-$
+<div class="huge" markdown="1">So what is the point? Why not any of the apps that let you install Arch or full Debian?</div>
+
+<div data-order="1" class="huge" markdown="1">Termux: API</div>
+
+END); ?></section>
+
+
+
+<section><?= md(<<<END
+## Termux: API
+
+### Access device functionality using command line programs
+
+![Screenshot of Termux Notification](<?= img('termux-notification.png'); ?>){.right}
+
+#### Examples:
+- Get sensor data
+    - battery information
+    - gps location
+- Create notifications
+- Capture a photo
+- Enable camera led
+- Toggle wifi state
+- Change volume
+- Get and set clipboard
+- List and send sms
+- Vibrate the phone
+
+... and more things!
+
+```bash
+~ $ termux-battery-status
+{
+  "health": "GOOD",
+  "percentage": 100,
+  "plugged": "PLUGGED_USB",
+  "status": "FULL",
+  "temperature": 34.0,
+  "current": -386357
+}
 ```
 
 END); ?></section>
+
+
+
 <section><?= md(<<<END
-## Slide with animated code
 
-<div>
-    <pre class="animationcode">
-$ git init mein-beispiel-repository
-<span data-order="1">Initialized empty Git repository in /home/glow/mein-beispiel-repository/.git/
-$ </span><span data-order="2">cd mein-beispiel-repository
-$ </span><span data-order="3">pwd
-</span><span data-order="4">/home/oli/mein-beispiel-repository
-$ </span>
-</pre>
-</div>
+<div class="huge" markdown="1">So what __am__ I doing with Termux?</div>
 
-END); ?>
-</section>
+
+END); ?></section>
+
+
+
+<section><?= md(<<<END
+## Using cronjobs to automate all the things
+
+- Set my phone into Do Not Disturb mode automatically
+    - set notifcation and call volume to 0
+    - Send intents to GadgetBridge to set the watch brightness
+- Automatically run `apt update`
+- run `rsync` at night to back up all my data
+- update my calendars via `vdirsyncer`
+- download emails with `isync`.
+- update my rss feeds with `newsboat`
+- send my gps position as (encrypted!) email to myself
+
+END); ?></section>
+
+
+<section><?= md(<<<END
+## Music
+![Screenshot of Termux running ncmpcpp](<?= img('ncmpcpp.png'); ?>){.right}
+
+- Use mpd to play music
+- Use ncmpcpp as frontend
+- Alternative: use M.A.L.P. - MPD Client or another Android app as frontend
+- Use Beets to organize my library
+
+END); ?></section>
+
+
+
+<section><?= md(<<<END
+## Music
+![Screenshot of Termux running ncmpcpp](<?= img('ncmpcpp.png'); ?>){.right}
+
+- Use mpd to play music
+- Use ncmpcpp as frontend
+- Alternative: use M.A.L.P. - MPD Client or another Android app as frontend
+- Use Beets to organize my library
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Forward music to another device
+
+### mpd config:
+
+```
+audio_output {
+    type            "httpd"
+    name            "mpdforward"
+    encoder         "vorbis"
+    port            "8700"
+    bind_to_address "127.0.0.1"
+    quality         "5.0"
+    format          "44100:16:1"
+    max_clients     "0"
+    enabled         "yes"
+}
+```
+
+### forward port and start mpv
+
+```bash
+~ $ ssh mediacomputer -R localhost:8700:localhost:8700 mpv --cache-pause-wait=3 --no-resume-playback --loop-playlist=force http://127.0.0.1:8700
+```
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Podcasts
+
+
+- Use a classic podfetcher and run it as a cronjob
+- Play podcasts via mpv
+
+END); ?></section>
+
+
 <section class="endslide">
     <h2>The End</h2>
 </section>
