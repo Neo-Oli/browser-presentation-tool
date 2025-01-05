@@ -380,13 +380,9 @@ END); ?></section>
 
 
 <section><?= md(<<<END
-## Music
-![Screenshot of Termux running ncmpcpp](<?= img('ncmpcpp.png'); ?>){.right}
+## Termux: X11
+![Screenshot of Termux-x11](<?= img('x11.png'); ?>)
 
-- Use mpd to play music
-- Use ncmpcpp as frontend
-- Alternative: use M.A.L.P. - MPD Client or another Android app as frontend
-- Use Beets to organize my library
 
 END); ?></section>
 
@@ -438,6 +434,149 @@ END); ?></section>
 - Play podcasts via mpv
 
 END); ?></section>
+
+
+<section><?= md(<<<END
+## Install linux distribution inside a proot/chroot jail
+
+```bash
+~ $ apt install proot-distro
+~ $ proot-distro install archlinux
+[*] Installing Arch Linux...
+~ $ proot-distro login archlinux
+[root@localhost ~]#
+```
+END); ?></section>
+
+
+<section><?= $root; ?><?= md(<<<END
+
+
+## Have your sd card LUKS encrypted
+
+```bash
+#!/usr/bin/env bash
+
+# check /dev/block/vold for correct name
+sudo cryptsetup open /dev/block/vold/public:179,1 drive
+sudo fsck /dev/mapper/drive
+su --mount-master -c "mount /dev/mapper/drive \$HOME/drive
+```
+
+```
+# make it accessible to other android apps
+mkdir -p /sdcard/drive
+sdcard=/storage/emulated/0
+su -mm -c "\$PREFIX"/bin/bindfs "\$HOME"/drive \$sdcard/drive --multithreaded
+chmod o=rx \$sdcard/drive
+```
+
+END); ?></section>
+
+<section><?= $root; ?><?= md(<<<END
+
+
+## Have your termux installation LUKS encrypted
+
+https://glow.li/posts/encrypt-termux-fs/
+
+![Screenshot of Termux](<?= img('encrypt-termux-fs-screenshot.png'); ?>){.right}
+
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Run a grafana server to track a bunch of stuff
+
+![Screenshot of Grafana](<?= img('grafana.png'); ?>)
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Email
+
+<div markdown="1" data-order="1">
+![Screenshot of email graph](<?= img('email.png'); ?>)
+</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Email
+
+![Screenshot of email notification](<?= img('email-notification.png'); ?>)
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Email
+
+![Screenshot of termux running mutt](<?= img('mutt.png'); ?>)
+
+END); ?></section>
+<section><?= md(<<<END
+## Email
+
+### But also other things:
+- Push a notification via Gadgetbridge intent to smartwatch
+- Play notification sound and vibrate
+- Read out sender and subject with espeak/speechd
+
+
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Draw custom text onto wallpaper
+
+![Screenshot of phone homescreen](<?= img('wallpaper.png'); ?>)
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Seamless audio between computer and phone
+
+### Forward audio from computer to phone
+
+#### Create source on termux
+```bash
+pacmd load-module module-native-protocol-tcp listen=127.0.0.1
+```
+#### Connecting to phone with correct port forwarding
+```bash
+glow@stinkpad:~$ ssh localhost -p 8022 -L 14713:localhost:4713
+```
+#### Create pulseaudio tunnel
+
+```bash
+glow@stinkpad:~$ pacmd load-module module-tunnel-sink-new server=127.0.0.1:14713 sink_name=Termux sink_properties=device.description="Termux"
+```
+
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Automate things based on sensors
+
+- Start services when connected to certain SSIDs and stop them when disconnected
+- Run backup script only when phone is plugged in
+- Automatically turn of certain services when the battery is low
+- Send an SMS when in a certain location
+
+END); ?></section>
+
+<section><?= $root; ?><?= md(<<<END
+## Provisioning
+
+### You can set up a whole bunch of things using a script
+
+- Download and install APKs from F-Droid and Google Play
+- Set Android settings
+- Install config files directly into app directories
+- Install software in Termux
+
+END); ?></section>
+
 
 
 <section class="endslide">

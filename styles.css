@@ -177,7 +177,23 @@ td {
 .hugeleft {
     font-size: 3em;
 }
+
 .huge {
     font-size: 3em;
     text-align: center;
+}
+
+.stamp {
+    color: red;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    z-index: 1;
+    font-size: 2em;
+    transform: rotate(45deg);
+}
+
+a,
+a:visited {
+    color: white;
 }
