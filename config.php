@@ -1,7 +1,7 @@
 <?php
-$title = 'Browser Presentation Tool - Demo Presentation';
+$title = 'Termux - Not just a terminal emulator for your Android';
 $author = 'Glow';
-$date = '18.1.2018';
+$date = '09.1.2025';
 ?>
 <style>
     :root{

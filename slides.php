@@ -4,46 +4,197 @@
 <section class="title nofooter">
     <h1><?= $title; ?></h1>
     <p><?= $author; ?></p>
-    <p><?= $date; ?></p>
-</section>
-<section>
-    This is the simplest possible slide
-</section>
-<section class="slide2">
-    This is has alternative formating
-</section>
-<section class="nofooter">
-    This slide has no footer
+  2025-01-05  <p><?= $date; ?></p>
 </section>
 <section><?= md(<<<END
-## This slide has more formatting
+## Agenda
+- What even is Termux?
+- Installing software
+- Service management
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien. Aliquam sed volutpat ex. Integer augue mauris, scelerisque ac est ac, pharetra auctor nulla. Phasellus vitae sodales leo. Donec eget fringilla mi, et fermentum quam. Nulla pretium vulputate orci, et venenatis diam vehicula eu. Donec malesuada purus eu arcu dignissim luctus. Cras suscipit purus urna. Praesent quis purus sodales, iaculis turpis eget, suscipit dolor. Cras eget eros dapibus, tristique metus quis, suscipit arcu. Donec eget felis ut quam laoreet congue.
+END); ?></section>
 
-END); ?>
-</section>
+
 <section><?= md(<<<END
-## List
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
-END); ?>
-</section>
-<section>
-        <h2>Animated List</h2>
-    <ul>
-        <li data-order="1">Item 1</li>
-        <li data-order="2">Item 2</li>
-        <li data-order="3">Item 3</li>
-        <li data-order="5">Item 4, but the fifth to display</li>
-        <li data-order="4">Item 5, but the fourth to display</li>
-        <li class="replace" data-order="6">Item 6</li>
-        <li data-order="7">Item 7, but it replaces item 6</li>
-    </ul>
-</section>
+## Installing software
+<div class="center">
+<div data-order="1" class="huge" markdown="1">pkg? apt?</div>
+
+
+<div data-order="2" class="huge" markdown="1">__apt__, basically</div>
+</div>
+
+END); ?></section>
+<section><?= md(<<<END
+## Installing software
+
+### So what does `pkg install` do?
+
+<div data-order="1" markdown="1">
+It does 3 things:
+- Selecting a working mirror:
+
+`termux-change-repo`
+- Updateing package index:
+
+`apt update`
+
+- Installing the requested package
+
+`apt install $@`
+</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Installing software
+
+### So about installing software?
+
+```bash
+~ $ pkg install nano
+```
+
+
+### Or, if you're a pro
+
+```bash
+~ $ apt install vim
+```
+
+But remember to run `apt update` first and occasionally.
+
+END); ?></section>
+
+
+
+
+
+
+
+
+<section><?= md(<<<END
+<div class="huge" markdown="1">So it is basically __Debian__?</div>
+END); ?></section>
+
+
+
+<section><?= md(<<<END
+
+<div data-order="1" class="huge" markdown="1">No __systemd__ here!</div>
+
+<div data-order="2" class="huge" markdown="1">Based on __runit__?</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Service Management
+
+1. Install termux-services
+```bash
+~ $ apt install termux-services
+```
+
+<div data-order="1" markdown="1">
+2. Start the service daemon.
+```bash
+~ $ service-daemon start
+```
+Or restart Termux, because the service daemon autostarts
+</div>
+
+<div data-order="2" markdown="1">
+3. Install a package that provides a service
+```bash
+~ $ apt install openssh
+```
+</div>
+END); ?></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><?= md(<<<END
+## Service Management
+
+4. Start/stop a service
+```bash
+~ $ sv up sshd
+~ $ sv status sshd
+run: sshd: (pid 10436) 14s, normally down; run: log: (pid 27794) 407s
+~ $ sv down sshd
+```
+
+<div data-order="1" markdown="1">
+5. Autostart a service
+```bash
+~ $ sv-enable sshd
+~ $ sv status sshd
+run: sshd: (pid 10436) 140s; run: log: (pid 27794) 533s
+```
+</div>
+<div data-order="5" markdown="1">
+6. Check log files
+```bash
+~ $ cat \$LOGDIR/sv/sshd/current
+2025-01-05_14:44:47.27061 Server listening on :: port 8022.
+2025-01-05_14:44:47.27100 Server listening on 0.0.0.0 port 8022.
+```
+</div>
+
+END); ?></section>
+
+
+<section><?= md(<<<END
+## Access Termux via USB
+
+<div data-order="1" markdown="1">
+1. Enable usb debugging
+![picture of usb debugging dialog](<?= img('usb-debugging.png'); ?>){.left}
+
+</div>
+
+<div data-order="1" markdown="1">
+2. Install adb
+</div>
+
+<div data-order="2" markdown="1">
+2. Forward sshd port
+```bash
+glow@stinkpad:~$ adb forward tcp:8022 tcp:8022
+```
+</div>
+<div data-order="3" markdown="1">
+3. Conenct via ssh to local port
+```bash
+glow@stinkpad:~$ ssh localhost -p 8022
+```
+</div>
+
+<div data-order="4" markdown="1">
+4. Authenticate for the first time
+```bash
+~ $ passwd
+New password:
+Retype new password:
+New password was successfully set.
+
+```
+</div>
+END); ?></section>
+
+
+
+
 <section><?= md(<<<END
 ## A picture
 

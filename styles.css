@@ -19,34 +19,6 @@ footer {
     padding: 5px;
 }
 
-section {
-    background-color: white;
-}
-
-body {
-    font-size: 18px;
-    hyphens: auto;
-    font-family: sans-serif;
-    word-wrap: break-word;
-}
-
-section > * {
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
-
-.slide2 {
-    background-color: #171717;
-    color: white;
-}
-
-.nofooter {
-    height: 100vh;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 10;
-}
-
 h2 {
     text-align: center;
     background-color: var(--main-color);
@@ -69,6 +41,40 @@ h2::after {
     position: absolute;
 }
 
+section {
+    background-color: #30303a;
+    color: white;
+}
+
+body {
+    font-size: 18px;
+    hyphens: auto;
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+
+section > * {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+section > h2 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.slide2 {
+    background-color: #171717;
+    color: white;
+}
+
+.nofooter {
+    height: 100vh;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10;
+}
+
 strong {
     color: var(--title-color);
 }
@@ -82,6 +88,11 @@ img.right {
     float: right;
     max-width: 35%;
     margin: 0 0 1rem 1rem;
+}
+
+img.left {
+    max-width: 35%;
+    margin: 10px 0;
 }
 
 .endslide {
@@ -131,7 +142,7 @@ pre.animationcode {
 }
 
 code {
-    background-color: #ddd;
+    background-color: #000;
     border: 0.05em solid #aaa;
     border-radius: 0.2em;
     padding: 0.1em;
@@ -161,4 +172,9 @@ th,
 td {
     border: 0.2rem solid black;
     text-align: left;
+}
+
+.huge {
+    font-size: 3em;
+    text-align: center;
 }
