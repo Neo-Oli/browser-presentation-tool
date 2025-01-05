@@ -52,6 +52,7 @@ footer {
 
 section {
     overflow: auto;
+    position: relative;
 
     /* space for footer */
     height: calc(100vh - var(--footer-height));
