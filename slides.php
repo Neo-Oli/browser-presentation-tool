@@ -16,6 +16,7 @@ END); ?></section>
 
 <section><?= md(<<<END
 ## Agenda
+- Who am I?
 - What even is Termux?
 - Installing software
 - Service management
@@ -29,6 +30,26 @@ END); ?></section>
 
 
 
+<section><?= md(<<<END
+## Who am I
+
+<div class="huge">Hi, I am glow!</div>
+
+- Termux power user since 2015
+- Serial issue creator
+- Ocassional package maintainer
+- Administrator of the official Termux Wiki
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Throwback Thursday
+
+
+END);
+?>
+<?= video('zeteco.mp4'); ?>
+</section>
 
 
 <section><?= md(<<<END
