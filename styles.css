@@ -3,7 +3,7 @@
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 img {
@@ -47,7 +47,7 @@ section {
 }
 
 body {
-    font-size: 20px;
+    font-size: 24px;
     hyphens: auto;
     font-family: sans-serif;
     word-wrap: break-word;
@@ -83,11 +83,17 @@ em {
     color: var(--second-color);
 }
 
-img.right {
+.right {
     clear: right;
     float: right;
     max-width: 35%;
-    margin: 0 0 1rem 1rem;
+    width: 35%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+img.right {
+    width: auto;
 }
 
 img.left {
@@ -141,6 +147,10 @@ pre.animationcode {
     padding-bottom: 2rem;
 }
 
+pre {
+    margin-bottom: 0;
+}
+
 code {
     background-color: #000;
     border: 0.05em solid #aaa;
@@ -183,6 +193,17 @@ td {
     text-align: center;
 }
 
+.center {
+    line-height: calc(100vh - var(--footer-height));
+    display: inline-block;
+    width: 100vw;
+    margin: 0;
+}
+
+.center > p {
+    margin: 0;
+}
+
 .stamp {
     color: red;
     position: absolute;
@@ -191,6 +212,7 @@ td {
     z-index: 1;
     font-size: 2em;
     transform: rotate(45deg);
+    margin: 0;
 }
 
 a,

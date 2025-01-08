@@ -1,11 +1,13 @@
 <footer><?= $author; ?> | <?= $title; ?> | <?= $date; ?> | Page <span class="data-pagenum"></span> of <span class="data-totalpages"></span>
 </footer>
 
-<section class="title nofooter">
-    <h1><?= $title; ?></h1>
-    <p><?= $author; ?></p>
-  2025-01-05  <p><?= $date; ?></p>
-</section>
+<section class="title nofooter"><?= md(<<<END
+#Termux
+# Not just a terminal emulator for your Android
+{$author}
+
+{$date}
+END); ?></section>
 
 
 
@@ -20,22 +22,13 @@
 - Access Termux via USB
 - What makes Termux special?
 - What am I doing with Termux?
+- What you can do on a rooted phone
 
 
 END); ?></section>
 
 
 
-
-
-
-
-<section><?= md(<<<END
-## What even is Termux?
-
-![Screenshot of Termux](<?= img('termux-screenshot.png'); ?>)
-
-END); ?></section>
 
 
 <section><?= md(<<<END
@@ -56,21 +49,27 @@ END); ?></section>
 
 <section><?= md(<<<END
 
-<div class="huge" markdown="1">Install from __F-Droid__ not Google Play for the moment</div>
+<div class="huge center" markdown="1">Install from __F-Droid__ not Google Play for the moment</div>
 
 END); ?></section>
 
 
 
+<section><?= md(<<<END
+## First Start
+
+![Screenshot of Termux](<?= img('termux-screenshot.png'); ?>)
+
+END); ?></section>
 
 
 
 <section><?= md(<<<END
 ## Installing software
-<div data-order="1" class="huge" markdown="1">pkg? apt?</div>
+<div  class="huge" markdown="1">pkg? apt?</div>
 
 
-<div data-order="2" class="huge" markdown="1">__apt__, basically</div>
+<div data-order="1" class="huge" markdown="1">__apt__, basically</div>
 
 END); ?></section>
 
@@ -152,7 +151,7 @@ END); ?></section>
 
 
 <section><?= md(<<<END
-<div class="huge" markdown="1">So it is basically __Debian__?</div>
+<div class="center huge" markdown="1">So it is basically __Debian__?</div>
 END); ?></section>
 
 
@@ -242,6 +241,26 @@ run: sshd: (pid 10436) 140s; run: log: (pid 27794) 533s
 
 END); ?></section>
 
+<section><?= md(<<<END
+## Service Management
+
+### Creating a new service
+
+#### \$PREFIX/var/service/nginx/run
+```bash
+#!/data/data/com.termux/files/usr/bin/sh
+exec nginx -p ~/.nginx -c ~/.nginx/nginx.conf 2>&1
+```
+
+<div data-order="1" markdown="1">
+#### Enable logging
+```bash
+mkdir -p \$PREFIX/var/service/nginx/log
+ln -sf \$PREFIX/share/termux-services/svlogger \$PREFIX/var/service/nginx/log/run
+```
+</div>
+
+END); ?></section>
 
 <section><?= md(<<<END
 ## Access Termux via USB
@@ -253,30 +272,25 @@ END); ?></section>
 </div>
 
 <div data-order="1" markdown="1">
-2. Install adb
-</div>
+2. Authenticate for the first time
+```bash
+~ $ passwd
+New password:
+```
 
 <div data-order="2" markdown="1">
-2. Forward sshd port
+3. Forward sshd port
 ```bash
 glow@stinkpad:~$ adb forward tcp:8022 tcp:8022
 ```
 </div>
+
 <div data-order="3" markdown="1">
-3. Conenct via ssh to local port
+4. Connect via ssh to local port
 ```bash
 glow@stinkpad:~$ ssh localhost -p 8022
 ```
 </div>
-
-<div data-order="4" markdown="1">
-4. Authenticate for the first time
-```bash
-~ $ passwd
-New password:
-Retype new password:
-New password was successfully set.
-```
 </div>
 END); ?></section>
 
@@ -311,22 +325,7 @@ END); ?></section>
 ### Access device functionality using command line programs
 
 ![Screenshot of Termux Notification](<?= img('termux-notification.png'); ?>){.right}
-
-#### Examples:
-- Get sensor data
-    - battery information
-    - gps location
-- Create notifications
-- Capture a photo
-- Enable camera led
-- Toggle wifi state
-- Change volume
-- Get and set clipboard
-- List and send sms
-- Vibrate the phone
-
-... and more things!
-
+<div class="right" markdown="1">
 ```bash
 ~ $ termux-battery-status
 {
@@ -338,6 +337,22 @@ END); ?></section>
   "current": -386357
 }
 ```
+</div>
+
+#### Examples:
+- Get sensor data (light sensor, accelerometer, gyroscope, pedometer)
+- Get battery information
+- GPS Location
+- Create notifications
+- Capture a photo
+- Enable camera led
+- Toggle WiFi state
+- Change volume
+- Get and set clipboard
+- List and send SMS
+- Vibrate the phone
+- Infrared?
+
 
 END); ?></section>
 
@@ -389,7 +404,9 @@ END); ?></section>
 END); ?></section>
 
 <section><?= md(<<<END
-## Forward music to another device
+## Music
+
+### Forward music to another device
 
 ### mpd config:
 
@@ -438,41 +455,6 @@ END); ?></section>
 END); ?></section>
 
 
-<section><?= $root; ?><?= md(<<<END
-
-
-## Have your sd card LUKS encrypted
-
-```bash
-#!/usr/bin/env bash
-
-# check /dev/block/vold for correct name
-sudo cryptsetup open /dev/block/vold/public:179,1 drive
-sudo fsck /dev/mapper/drive
-su --mount-master -c "mount /dev/mapper/drive \$HOME/drive
-```
-
-```
-# make it accessible to other android apps
-mkdir -p /sdcard/drive
-sdcard=/storage/emulated/0
-su -mm -c "\$PREFIX"/bin/bindfs "\$HOME"/drive \$sdcard/drive --multithreaded
-chmod o=rx \$sdcard/drive
-```
-
-END); ?></section>
-
-<section><?= $root; ?><?= md(<<<END
-
-
-## Have your termux installation LUKS encrypted
-
-https://glow.li/posts/encrypt-termux-fs/
-
-![Screenshot of Termux](<?= img('encrypt-termux-fs-screenshot.png'); ?>){.right}
-
-
-END); ?></section>
 
 <section><?= md(<<<END
 ## Run a grafana server to track a bunch of stuff
@@ -482,11 +464,13 @@ END); ?></section>
 END); ?></section>
 
 <section><?= md(<<<END
+<div class="huge center" markdown="1">Email</div>
+END); ?></section>
+
+<section><?= md(<<<END
 ## Email
 
-<div markdown="1" data-order="1">
 ![Screenshot of email graph](<?= img('email.png'); ?>)
-</div>
 
 END); ?></section>
 
@@ -554,6 +538,49 @@ END); ?></section>
 
 END); ?></section>
 
+<section><?= md(<<<END
+
+<div class="huge center" markdown="1">Root</div>
+
+END); ?></section>
+
+
+<section><?= $root; ?><?= md(<<<END
+
+
+## Have your sd card LUKS encrypted
+
+```bash
+#!/usr/bin/env bash
+
+# check /dev/block/vold for correct name
+sudo cryptsetup open /dev/block/vold/public:179,1 drive
+sudo fsck /dev/mapper/drive
+su --mount-master -c "mount /dev/mapper/drive \$HOME/drive
+```
+
+```
+# make it accessible to other android apps
+mkdir -p /sdcard/drive
+sdcard=/storage/emulated/0
+su -mm -c "\$PREFIX"/bin/bindfs "\$HOME"/drive \$sdcard/drive --multithreaded
+chmod o=rx \$sdcard/drive
+```
+
+END); ?></section>
+
+<section><?= $root; ?><?= md(<<<END
+
+
+## Have your termux installation LUKS encrypted
+
+https://glow.li/posts/encrypt-termux-fs/
+
+![Screenshot of Termux](<?= img('encrypt-termux-fs-screenshot.png'); ?>){.right}
+
+
+END); ?></section>
+
 <section><?= $root; ?><?= md(<<<END
 ## Provisioning
 
@@ -567,21 +594,54 @@ END); ?></section>
 END); ?></section>
 
 
+<section><?= $root; ?><?= md(<<<END
+## Observing Logcat
+
+```
+    t=u:r:untrusted_app_27:s0:c182,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c182,c256,c512,c768 tclass=file app=com.termux.api
+01-08 21:16:14.440 20948 20948 W bash    : type=1400 audit(0.0:48483886): avc:  granted  { execute } for  name="bash" dev="dm-8" ino=131884 scontext=u:r:untrusted_app_27:s0:c182,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c188,c256,c512,c768 tclass=file app=com.termux.api
+01-08 21:16:14.444 20948 20948 W termux-wifi-con: type=1400 audit(0.0:48483887): avc:  granted  { execute } for  path="/data/data/com.termux/files/usr/bin/bash" dev="dm-8" ino=131884 scontext=u:r:untrusted_app_27:s0:c182,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c188,c256,c512,c768 tclass=file app=com.termux.api
+01-08 21:16:14.603 20951 20951 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 10182 <<<<<<
+01-08 21:16:14.606 20951 20951 I AndroidRuntime: Using default boot image
+01-08 21:16:14.606 20951 20951 I AndroidRuntime: Leaving lock profiling enabled
+01-08 21:16:14.608 20951 20951 I app_process: Core platform API reporting enabled, enforcing=false
+01-08 21:16:14.609 20951 20951 I app_process: Using CollectorTypeCC GC.
+01-08 21:16:14.632  1027 24557 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+01-08 21:16:14.655  1027 24557 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+01-08 21:16:14.656  1027 24557 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+```
+### What I observe:
+
+- Media Keys on Bluetooth devices
+- Find my phone on my smartwatch
+- Connection state of bluetooth devices
+- Phone lock status
+
+
+END); ?></section>
+
+<section><?= $root; ?><?= md(<<<END
+## Freeze Apps
+
+### Freeze
+```bash
+su -c pm disable "com.whatsapp"
+```
+
+### Unfreeze
+```bash
+su -c pm enable "com.whatsapp"
+```
+END); ?></section>
 <section><?= md(<<<END
 
-<div class="huge" markdown="1">Summary</div>
+<div class="center huge" markdown="1">Conclusion</div>
 
 END); ?></section>
 
 <section><?= md(<<<END
 
-<div class="huge" markdown="1">Conclusion</div>
-
-END); ?></section>
-
-<section><?= md(<<<END
-
-<div class="huge" markdown="1">Questions?</div>
+<div class="huge center" markdown="1">Questions?</div>
 
 END); ?></section>
 
