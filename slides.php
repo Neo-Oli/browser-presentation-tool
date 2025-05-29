@@ -422,6 +422,10 @@ END); ?></section>
 - Alternative: use M.A.L.P. - MPD Client or another Android app as frontend
 - Use Beets to organize my library
 
+![Screenshot of mpd notification](<?= img('mpd-notification.png'); ?>){.left}
+
+https://github.com/Neo-Oli/termux-mpd-notifications
+
 END); ?></section>
 
 <section><?= md(<<<END
@@ -460,6 +464,10 @@ END); ?></section>
 - Use a classic podfetcher and run it as a cronjob
 - Play podcasts via mpv
 
+![Screenshot of mpv notification](<?= img('mpv-notification.png'); ?>){.left}
+
+https://github.com/Neo-Oli/termux-mpv
+
 END); ?></section>
 
 
@@ -473,6 +481,10 @@ END); ?></section>
 ~ $ proot-distro login archlinux
 [root@localhost ~]#
 ```
+
+### Distributions
+Alpine Linux, Arch Linux, Artix Linux, Chimera Linux, Debian, deepin, Fedora, Manjaro, OpenKylin, OpenSuse, Pardus, Ubuntu, Void Linux
+
 END); ?></section>
 
 
@@ -657,6 +669,13 @@ END); ?></section>
 <section><?= md(<<<END
 
 <div class="center huge" markdown="1">Conclusion</div>
+
+END); ?></section>
+<section><?= md(<<<END
+## Cyberdeck
+![Cyberdeck](<?= img('cyberdeck4.webp'); ?>)
+
+
 
 END); ?></section>
 
