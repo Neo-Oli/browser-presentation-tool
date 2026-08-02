@@ -1,0 +1,67 @@
+- Agenda
+- Who am I
+- Video
+- What even is Termux?
+    - Empty slide
+        - Terminal Emulator
+        - Which pretty good, but boring!
+        - Linux Environment
+        - This is the neat thing!
+- Install from F-Droid not Google Play for the moment
+- Screenshot
+- pkg? apt?
+    - apt, basically
+- So what does pkg install do?
+    - 3 Things
+- Commands to install
+- specific package managers
+- Debian?
+- No Systemd
+- Runit?
+- Service Management
+- Install termux-services
+- Start daemon
+- Install package with service
+- Start/Stop a service
+- Autostart
+- Logfiles
+- Create a service file
+- Enable logging
+- Access Termux via USB
+- ADB
+- passwd
+- port forward
+- ssh
+- sshfs
+- Whats the point?
+- Termux: API
+- Termux: Api examples
+- What am I doing?
+- Cronjobs
+- X11
+- Music
+- Mpd forward
+- Podcasts
+- Proot
+- Grafana
+- Email
+- Email graph
+- Notification Screenshot (spam)
+- Mutt
+- Other Email Things
+   - Gadgetbridte
+   - Play notification sound and vibrate
+   - espeak
+- Draw custom text onto wallpaper
+- Pulseaudio
+- Automate things based on sensors
+- Root
+- SD encrypted
+- Encrypt Termux Directory
+- Provisioning Android
+- Logcat
+- Freeze Apps
+- Conclusion
+- Cyberdeck
+- Questions
+- The End
