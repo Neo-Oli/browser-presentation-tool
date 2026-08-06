@@ -2,9 +2,17 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 error_reporting(\E_ALL ^ \E_DEPRECATED);
 function img($path) {
+    return data($path, 'image');
+}
+function video($path) {
+    $type = pathinfo($path, \PATHINFO_EXTENSION);
+
+    return '<div class="video-container"><video controls><source type="video/' . $type . '" src="' . data($path, 'video') . '"></video></div>';
+}
+function data($path, $mimetype) {
     $type = pathinfo($path, \PATHINFO_EXTENSION);
     $data = file_get_contents('../' . $path);
-    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+    $base64 = 'data:' . $mimetype . '/' . $type . ';base64,' . base64_encode($data);
 
     return $base64;
 }
