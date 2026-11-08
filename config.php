@@ -6,7 +6,7 @@ $date = '2026-11-12';
 <style>
     :root{
         --fg-color: black;
-        --bg-color: white;
+        --bg-color: #e3d2aa;
         --footer-height: 5rem;
         --main-color: rgb(54, 96, 160);
         --sub-color: rgb(54, 96, 160);
