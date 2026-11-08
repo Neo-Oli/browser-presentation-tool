@@ -27,6 +27,7 @@
         - nickName: ❌
         - device_region: ✅
         - allows only 15 characters :(
+- Set device_region via intent
 - Infinite data with chunking and delta updates
     - Delta update
     - Custom data object: phoneBattery, infoText, media
