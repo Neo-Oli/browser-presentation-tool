@@ -1,4 +1,9 @@
 {
+    "config": {
+        "platform": {
+            "php": "8.3.33"
+        }
+    },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "*",
         "kubawerlos/php-cs-fixer-custom-fixers": "*",

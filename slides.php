@@ -53,6 +53,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac a
 
 END); ?>
 </section>
+<section>
+    <h2>A left-aligned picture</h2>
+    <img class="left" src="<?= img('elephant.jpg'); ?>" alt="An elephant">
+    <p>A quiet moment in the wild.</p>
+</section>
+<section class="imgrow">
+    <h2>Pictures in a row</h2>
+    <p>
+        <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant, first view">
+        <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant, second view">
+        <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant, third view">
+    </p>
+</section>
+<section>
+    <h2>A compact picture</h2>
+    <img class="small left" src="<?= img('elephant.jpg'); ?>" alt="An elephant">
+    <ul>
+        <li>Elephants communicate through sound and touch.</li>
+        <li>Their trunks are used for breathing, drinking, and grasping.</li>
+        <li>Family groups care for their young together.</li>
+    </ul>
+</section>
+<section class="center">
+    <h2>A moment to pause</h2>
+    <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant">
+    <p>One picture. One thought.</p>
+</section>
+<section class="center">
+    <h2>Two sides of the story</h2>
+    <p><span data-order="1">Room to roam</span></p>
+    <p><span class="reversed" data-order="2">A place to return</span></p>
+    <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant">
+</section>
+<section class="center">
+    <h2>A memorable takeaway</h2>
+    <img class="small" src="<?= img('elephant.jpg'); ?>" alt="An elephant">
+    <p class="exclamation">Make room for the big ideas!</p>
+</section>
 <section><?= md(<<<END
 ## Responsive Design
 
