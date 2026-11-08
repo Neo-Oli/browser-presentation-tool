@@ -13,12 +13,13 @@ video {
     margin: 0 auto;
     display: block;
 }
+
 img.left {
-    margin: 0
+    margin: 0;
 }
 
 footer {
-background-color: var(--main-color);
+    background-color: var(--main-color);
     color: white;
     padding: 5px;
 }
@@ -87,6 +88,7 @@ img.right {
     max-width: 35%;
     margin: 0 0 1rem 1rem;
 }
+
 .imgrow p {
     display: flex;
     align-items: flex-start;
@@ -118,9 +120,11 @@ img.right {
     position: absolute;
     left: -2em;
 }
+
 .active.reversed::before {
-    content:""
+    content: "";
 }
+
 .active.reversed::after {
     content: "←";
     position: absolute;
@@ -168,9 +172,11 @@ code {
     background-color: var(--title-color);
     color: white;
 }
-.center{
+
+.center {
     text-align: center;
 }
+
 .fullscreen {
     padding: 0;
     width: 100%;
@@ -190,9 +196,9 @@ td {
 
 .exclamation {
     font-size: 3rem;
-transform: rotate(-5deg);
-transform-origin: center;
-color: var(--title-color);
+    transform: rotate(-5deg);
+    transform-origin: center;
+    color: var(--title-color);
 }
 
 .small {
