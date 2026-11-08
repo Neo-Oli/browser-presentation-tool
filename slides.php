@@ -6,98 +6,290 @@
     <p><?= $author; ?></p>
     <p><?= $date; ?></p>
 </section>
-<section>
-    This is the simplest possible slide
-</section>
-<section class="slide2">
-    This is has alternative formating
-</section>
-<section class="nofooter">
-    This slide has no footer
-</section>
-<section><?= md(<<<END
-## This slide has more formatting
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget nisl sapien. Aliquam sed volutpat ex. Integer augue mauris, scelerisque ac est ac, pharetra auctor nulla. Phasellus vitae sodales leo. Donec eget fringilla mi, et fermentum quam. Nulla pretium vulputate orci, et venenatis diam vehicula eu. Donec malesuada purus eu arcu dignissim luctus. Cras suscipit purus urna. Praesent quis purus sodales, iaculis turpis eget, suscipit dolor. Cras eget eros dapibus, tristique metus quis, suscipit arcu. Donec eget felis ut quam laoreet congue.
-
-END); ?>
-</section>
-<section><?= md(<<<END
-## List
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-- Item 6
-END); ?>
-</section>
-<section>
-        <h2>Animated List</h2>
-    <ul>
-        <li data-order="1">Item 1</li>
-        <li data-order="2">Item 2</li>
-        <li data-order="3">Item 3</li>
-        <li data-order="5">Item 4, but the fifth to display</li>
-        <li data-order="4">Item 5, but the fourth to display</li>
-        <li class="replace" data-order="6">Item 6</li>
-        <li data-order="7">Item 7, but it replaces item 6</li>
-    </ul>
-</section>
-<section><?= md(<<<END
-## A picture
-
-![Example picture of an elephant](<?= img('elephant.jpg'); ?>){.right}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus et orci ac auctor. Aenean risus libero, maximus eget sapien at, mollis aliquam dui. Nulla laoreet vehicula lorem non feugiat. Cras eu hendrerit mi, id euismod est. Etiam in ligula finibus, pharetra ligula placerat, aliquam neque. Nulla dapibus pulvinar facilisis. Integer ex orci, pretium quis sem a, sodales sodales nibh. Etiam blandit orci vitae leo fermentum auctor. Vestibulum feugiat tellus quis sollicitudin tincidunt. Ut tincidunt aliquet erat, nec mollis nunc accumsan quis. Sed ac libero vitae eros tempor sollicitudin. In placerat tincidunt dictum. Sed condimentum nulla magna.
-
-END); ?>
-</section>
-<section><?= md(<<<END
-## Responsive Design
-
-Click the edges to navigate on mobile
-
-END); ?>
-</section>
-<section class="nofooter">
-    <img class="fullscreen" src="<?= img('elephant.jpg'); ?>" alt="Example picture of an elephant">
-</section>
 
 <section><?= md(<<<END
-## Slide with code
+## Contents
 
-```
-$ git push origin olis-cool-feature
-Username for 'https://github.com': neo-oli
-Password for 'https://neo-oli@github.com':
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote:
-remote: Create a pull request for 'olis-cool-feature' on GitHub by visiting:
-remote:      https://github.com/swissredcross/beispiel-repository/pull/new/olis-cool-feature
-remote:
-To https://github.com/swissredcross/beispiel-repository.git
- * [new branch]      olis-cool-feature -> olis-cool-feature
-$
-```
+- What is gadgetbridge?
+- My odysee to push and pull custom data from my smartwatch
 
 END); ?></section>
 <section><?= md(<<<END
-## Slide with animated code
+## Gadgetbridge
+![Gadgetbridge homepage](<?= img('gadgetbridge-website.png'); ?>){.right}
 
-<div>
-    <pre class="animationcode">
-$ git init mein-beispiel-repository
-<span data-order="1">Initialized empty Git repository in /home/glow/mein-beispiel-repository/.git/
-$ </span><span data-order="2">cd mein-beispiel-repository
-$ </span><span data-order="3">pwd
-</span><span data-order="4">/home/oli/mein-beispiel-repository
-$ </span>
-</pre>
-</div>
+- FOSS
+- Replaces proprietary apps
+- All data stays local - requires no internet connection or account
+- Works with a ton of existing devices
 
 END); ?>
 </section>
+
+<section class="center"><?= md(<<<END
+## Available Devices
+
+<strong>679</strong> gadgets are currently known to work with Gadgetbridge!
+
+![Gadgetbridge available devices](<?= img('devicelist.png'); ?>)
+
+END); ?>
+</section>
+
+
+<section><?= md(<<<END
+## Devices
+<div class="imgrow" markdown="1">
+![Gadgetbridge devices](<?= img('gadgetbridge-devices.png'); ?>)
+![Gadgetbridge devices](<?= img('gadgetbridge-devices-2.png'); ?>)
+</div>
+END); ?>
+</section>
+
+<section><?= md(<<<END
+## Dashboard
+<div class="imgrow" markdown="1">
+![Gadgetbridge dashboard 1](<?= img('gadgetbridge-dashboard-1.png'); ?>)
+![Gadgetbridge dashboard 2](<?= img('gadgetbridge-dashboard-2.png'); ?>)
+</div>
+END); ?>
+</section>
+
+<section><?= md(<<<END
+## Workouts
+<div class="imgrow" markdown="1">
+![Gadgetbridge workouts 1](<?= img('gadgetbridge-workouts-1.png'); ?>)
+![Gadgetbridge workouts 2](<?= img('gadgetbridge-workouts-2.png'); ?>)
+![Gadgetbridge workouts 3](<?= img('gadgetbridge-workouts-3.png'); ?>)
+</div>
+END); ?></section>
+
+<section class="title">
+    <h1>Story Time</h1>
+</section>
+
+
+<section><?= md(<<<END
+## The watchface I've used for many years
+<div class="imgrow" markdown="1">
+![default watchface](<?= img('watch-default.png'); ?>)
+![default watchface](<?= img('watch.jpg'); ?>)
+</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Weather JSON
+```json
+    {
+    "timestamp": 1794147544,
+    "location": "Bern District 3",
+    "currentTemp": 283,
+    "todayMinTemp": 277,
+    "todayMaxTemp": 283,
+    "currentHumidity": 68,
+    "uvIndex": 1.15,
+    "windSpeed": 4.4,
+    "windDirection": 235,
+    "currentConditionCode": 802,
+    "precipProbability": 5,
+    "sunRise": 1794118980,
+    "sunSet": 1794153840,
+    "feelsLikeTemp": 281.34999999999997,
+    "isCurrentLocation": 1,
+    "forecasts": [
+        {
+            "maxTemp": 279,
+            "minTemp": 282,
+            "conditionCode": 500
+        },
+        {
+            "maxTemp": 281,
+            "minTemp": 289,
+            "conditionCode": 500
+        },
+```
+
+END); ?></section>
+
+<section><?= md(<<<END
+## That city name could be modified
+![default watchface](<?= img('watch-location.png'); ?>)
+END); ?></section>
+
+<section class="title">
+    <h1>How hard can it be to create a custom watch face?</h1>
+</section>
+
+<section><?= md(<<<END
+## Turns out it's quite simple
+![default watchface](<?= img('custom-watchface.png'); ?>){.right}
+```js
+    const text = hmUI.createWidget(hmUI.widget.TEXT, {
+      x: 96,
+      y: 120,
+      w: 288,
+      h: 46,
+      color: 0xffffff,
+      text_size: 36,
+      align_h: hmUI.align.CENTER_H,
+      align_v: hmUI.align.CENTER_V,
+      text_style: hmUI.text_style.NONE,
+      text: 'HELLO ZEPPOS'
+    })
+
+```
+
+<div data-order="1" class="exclamation">Location allows 32 characters!</div>
+
+END); ?></section>
+
+<section class="title">
+    <h1>Disaster: Xiami broke my setup!</h1>
+</section>
+<section><?= md(<<<END
+## Finding an alternative
+![ZeppOS Userdata](<?= img('userdata.png'); ?>)
+
+<div data-order="1">
+<h3>Two candidates:</h3>
+<ul>
+    <li>nickName <span class="reversed" data-order="2">❌</span></li>
+    <li>device_region <span class="reversed" data-order="3">✅</span> <span class="reversed" data-order="4">allows only 15 characters :(</span></li>
+</ul>
+</div>
+
+END); ?></section>
+
+<section><?= md(<<<END
+## Infinite data with chunking and delta updates
+
+### Delta update
+```
+2026-11-08_14:00:49.55708 sending data 1:8KnMcKnMcKnM / 5
+2026-11-08_14:00:51.47250 sending data 2:KnNTowwqc1Nj / 5
+2026-11-08_14:00:51.80513 sending data 3:nMsKnNTjCpzI / 5
+2026-11-08_14:00:52.21059 sending data 4:p+KWhOKWhOKW / 5
+2026-11-08_14:00:52.67848 sending data 5:qcyOTEx / 5
+```
+
+![Watchface with much data](<?= img('now-with-delta.png'); ?>){.right}
+
+### Custom data object
+```javascript
+    phoneBattery: {
+        value: 0,
+        key: '9',
+        type: 'number'
+    },
+    infoText: {
+        value: 'No info text',
+        key: 'a',
+        type: 'string',
+    },
+    media: {
+        value: 'Loading media',
+        key: 'b',
+        type: 'string',
+    },
+```
+END); ?></section>
+<section class="title">
+    <h1>What about sending commands to the phone?</h1>
+</section>
+<section><?= md(<<<END
+## Sending commands to phone: Comparatively Easy
+
+<div data-order="1" markdown="1">
+### Enable developer settings
+![App Logs](<?= img('app-logs.png'); ?>){.small .left}
+</div>
+<div data-order="2" markdown="1">
+### Send data in watch face
+```javascript
+console.log(`DROIDDO: next`)
+```
+</div>
+<div data-order="3" markdown="1">
+### Receive data on android
+```bash
+$ sudo logcat | grep DROIDDO
+11-08 17:20:55.854  9771 23800 I n.f.gadgetbridge.service.devices.huami.zeppos.services.ZeppOsLogsService: Log entry - 2026-11-08T17:20:55 [7122832] - DROIDDO: mtoggle
+11-08 17:21:02.891  9771 23800 I n.f.gadgetbridge.service.devices.huami.zeppos.services.ZeppOsLogsService: Log entry - 2026-11-08T17:21:02 [7122832] - DROIDDO: mtoggle
+11-08 17:21:05.271  9771 23800 I n.f.gadgetbridge.service.devices.huami.zeppos.services.ZeppOsLogsService: Log entry - 2026-11-08T17:21:05 [7122832] - DROIDDO: next
+```
+</div>
+
+END); ?></section>
+
+<section class="title">
+    <h1>Endless possibilities</h1>
+</section>
+
+<section><?= md(<<<END
+## My main watch screen
+![Main Watch screen](<?= img('possibilities-main.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## Buttons
+![Media Buttons](<?= img('buttons.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## Calendar
+![Calendar](<?= img('calendar.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## My main watch screen
+![Weather Screen](<?= img('weather.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## Custom Sensor Data
+<div class="imgrow" markdown="1">
+![Aranet](<?= img('aranet.png'); ?>)
+![Aranet Device](<?= img('aranet-device.jpg'); ?>)
+</div>
+END); ?></section>
+
+<section><?= md(<<<END
+## Tamagotchi
+![Tamagotchi](<?= img('tamagotchi.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## Colors
+![Colors](<?= img('colors.png'); ?>)
+END); ?></section>
+
+<section class="title">
+    <h1>That's too much data, now it's really slow!</h1>
+</section>
+
+<section><?= md(<<<END
+## Remember this slide?
+![ZeppOS Userdata](<?= img('userdata.png'); ?>)
+
+<h3>Two candidates:</h3>
+<ul>
+    <li>nickName ❌ <span class="reversed" data-order="1"><strong>Would allow 127 characters</strong></span></li>
+    <li>device_region ✅</span> allows only 15 characters :(</li>
+</ul>
+END); ?></section>
+
+<section><?= md(<<<END
+## Bugging the developers about it
+![Codeberg issue](<?= img('issue.png'); ?>)
+END); ?></section>
+
+<section><?= md(<<<END
+## The response
+![Codeberg response](<?= img('response.png'); ?>)
+END); ?></section>
+
 <section class="endslide">
     <h2>The End</h2>
 </section>

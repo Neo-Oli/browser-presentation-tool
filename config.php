@@ -1,7 +1,7 @@
 <?php
-$title = 'Browser Presentation Tool - Demo Presentation';
+$title = 'Wearables - Gadgetbridge and how I display custom data';
 $author = 'Glow';
-$date = '18.1.2018';
+$date = '2026-11-12';
 ?>
 <style>
     :root{
