@@ -94,9 +94,13 @@ img.right {
 .imgrow p {
     display: flex;
     align-items: flex-start;
+    gap: 1rem;
 }
 
 .imgrow p img {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 1rem;
     width: auto;
     height: auto;
     max-width: 100%;
