@@ -159,6 +159,16 @@ END); ?></section>
     <li>device_region <span class="reversed" data-order="3">✅</span> <span class="reversed" data-order="4">allows only 15 characters :(</span></li>
 </ul>
 </div>
+END); ?></section>
+
+<section><?= md(<<<END
+## Set device_region via intent
+
+```
+am broadcast -a "nodomain.freeyourgadget.gadgetbridge.action.SET_DEVICE_SETTING" \
+    -e "device" "\$GADGETBRIDGE_MAC" -e "key" "device_region" -e "value" "\$data" \
+    "\$GADGETBRIDGE_NAME"
+```
 
 END); ?></section>
 

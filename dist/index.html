@@ -490,6 +490,11 @@ td {
 </ul>
 </div></section>
 
+<section><h2>Set device_region via intent</h2>
+<pre><code>am broadcast -a "nodomain.freeyourgadget.gadgetbridge.action.SET_DEVICE_SETTING" \
+    -e "device" "$GADGETBRIDGE_MAC" -e "key" "device_region" -e "value" "$data" \
+    "$GADGETBRIDGE_NAME"</code></pre></section>
+
 <section><h2>Infinite data with chunking and delta updates</h2>
 <h3>Delta update</h3>
 <pre><code>2026-11-08_14:00:49.55708 sending data 1:8KnMcKnMcKnM / 5
