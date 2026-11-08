@@ -1,0 +1,55 @@
+- Contents
+    - What is gadgetbridge?
+    - My odysee to push and pull custom data from my smartwatch
+- Gadgetbridge
+    - FOSS
+    - Replaces proprietary apps
+    - All data stays local - requires no internet connection or account
+    - Works with a ton of existing devices
+- Available Devices
+    - 679 gadgets are currently known to work with Gadgetbridge!
+- Devices Screens
+- Dashboard Screens
+- Workouts Screens
+- Title: Story Time
+- The watchface I've used for many years
+    - The Weather Text
+- Weather JSON
+- That city name could be modified
+    - Used this for many more years
+- Custom watchface
+- Turns out it's quite simple
+    - ZeppOS Code example
+    - Location allows 32 characters!
+- Disaster: Xiami broke my setup!
+- Finding an alternative
+    - Two candidates:
+        - nickName: ❌
+        - device_region: ✅
+        - allows only 15 characters :(
+- Infinite data with chunking and delta updates
+    - Delta update
+    - Custom data object: phoneBattery, infoText, media
+- What about sending commands to the phone?
+- Sending commands to phone: Comparatively Easy
+    - Enable developer settings
+    - Send data in watch face: console.log(`DROIDDO: next`)
+    - Receive data on android: sudo logcat | grep DROIDDO
+- Title: Endless possibilities
+- My main watch screen
+- Buttons
+- Calendar
+- My main watch screen
+    - Weather Screen
+- Custom Sensor Data
+    - Aranet
+- Tamagotchi
+- Colors
+- Title: That's too much data, now it's really slow!
+- Remember this slide?
+    - nickName: ❌
+        - Would allow 127 characters
+    - device_region: ✅ allows only 15 characters :(
+- Bugging the developers about it
+- The response
+- The End
