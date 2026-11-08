@@ -25,11 +25,13 @@ footer {
 }
 
 section {
-    background-color: white;
+    background-color: var(--bg-color);
 }
 
 body {
     font-size: 18px;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     hyphens: auto;
     font-family: sans-serif;
     overflow-wrap: break-word;

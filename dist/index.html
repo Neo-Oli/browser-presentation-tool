@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
                         <style>
     :root{
+        --fg-color: black;
+        --bg-color: white;
         --footer-height: 5rem;
         --main-color: rgb(54, 96, 160);
         --sub-color: rgb(54, 96, 160);
@@ -172,11 +174,13 @@ footer {
 }
 
 section {
-    background-color: white;
+    background-color: var(--bg-color);
 }
 
 body {
     font-size: 18px;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
     hyphens: auto;
     font-family: sans-serif;
     overflow-wrap: break-word;
