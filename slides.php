@@ -11,8 +11,8 @@
 <section><?= md(<<<END
 ## Contents
 
-- What is gadgetbridge?
-- My odysee to push and pull custom data from my smartwatch
+- What is Gadgetbridge?
+- My odyssey to push and pull custom data from my smartwatch
 
 END); ?></section>
 <section><?= md(<<<END
@@ -146,7 +146,7 @@ END); ?></section>
 END); ?></section>
 
 <section class="title">
-    <h1>Disaster: Xiami broke my setup!</h1>
+    <h1>Disaster: Xiaomi broke my setup!</h1>
 </section>
 <section><?= md(<<<END
 ## Finding an alternative
@@ -199,20 +199,20 @@ END); ?></section>
     <h1>What about sending commands to the phone?</h1>
 </section>
 <section><?= md(<<<END
-## Sending commands to phone: Comparatively Easy
+## Sending commands to the phone: Comparatively Easy
 
 <div data-order="1" markdown="1">
 ### Enable developer settings
 ![App Logs](<?= img('app-logs.png'); ?>){.small .left}
 </div>
 <div data-order="2" markdown="1">
-### Send data in watch face
+### Send data from the watch face
 ```javascript
 console.log(`DROIDDO: next`)
 ```
 </div>
 <div data-order="3" markdown="1">
-### Receive data on android
+### Receive data on Android
 ```bash
 $ sudo logcat | grep DROIDDO
 11-08 17:20:55.854  9771 23800 I n.f.gadgetbridge.service.devices.huami.zeppos.services.ZeppOsLogsService: Log entry - 2026-11-08T17:20:55 [7122832] - DROIDDO: mtoggle
@@ -243,7 +243,7 @@ END); ?></section>
 END); ?></section>
 
 <section><?= md(<<<END
-## My main watch screen
+## Weather
 ![Weather Screen](<?= img('weather.png'); ?>)
 END); ?></section>
 
@@ -276,7 +276,7 @@ END); ?></section>
 <h3>Two candidates:</h3>
 <ul>
     <li>nickName ❌ <span class="reversed" data-order="1"><strong>Would allow 127 characters</strong></span></li>
-    <li>device_region ✅</span> allows only 15 characters :(</li>
+    <li>device_region ✅ allows only 15 characters :(</li>
 </ul>
 END); ?></section>
 

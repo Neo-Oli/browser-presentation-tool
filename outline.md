@@ -1,6 +1,6 @@
 - Contents
-    - What is gadgetbridge?
-    - My odysee to push and pull custom data from my smartwatch
+    - What is Gadgetbridge?
+    - My odyssey to push and pull custom data from my smartwatch
 - Gadgetbridge
     - FOSS
     - Replaces proprietary apps
@@ -21,7 +21,7 @@
 - Turns out it's quite simple
     - ZeppOS Code example
     - Location allows 32 characters!
-- Disaster: Xiami broke my setup!
+- Disaster: Xiaomi broke my setup!
 - Finding an alternative
     - Two candidates:
         - nickName: ❌
@@ -31,15 +31,15 @@
     - Delta update
     - Custom data object: phoneBattery, infoText, media
 - What about sending commands to the phone?
-- Sending commands to phone: Comparatively Easy
+- Sending commands to the phone: Comparatively Easy
     - Enable developer settings
-    - Send data in watch face: console.log(`DROIDDO: next`)
-    - Receive data on android: sudo logcat | grep DROIDDO
+    - Send data from the watch face: console.log(`DROIDDO: next`)
+    - Receive data on Android: sudo logcat | grep DROIDDO
 - Title: Endless possibilities
 - My main watch screen
 - Buttons
 - Calendar
-- My main watch screen
+- Weather
     - Weather Screen
 - Custom Sensor Data
     - Aranet
