@@ -90,6 +90,12 @@ img.right {
     max-width: 35%;
     margin: 0 0 1rem 1rem;
 }
+img.rightbig {
+    clear: right;
+    float: right;
+    max-width: 55%;
+    margin: 0 0 1rem 1rem;
+}
 
 .imgrow p {
     display: flex;

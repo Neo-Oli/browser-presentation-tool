@@ -30,7 +30,7 @@ END); ?>
 <section class="center"><?= md(<<<END
 ## Available Devices
 
-<strong>679</strong> gadgets are currently known to work with Gadgetbridge!
+<strong>684</strong> gadgets are currently known to work with Gadgetbridge!
 
 ![Gadgetbridge available devices](<?= img('devicelist.png'); ?>)
 
@@ -150,7 +150,7 @@ END); ?></section>
 </section>
 <section><?= md(<<<END
 ## Finding an alternative
-![ZeppOS Userdata](<?= img('userdata.png'); ?>)
+![ZeppOS Userdata](<?= img('userdata.png'); ?>){.rightbig}
 
 <div data-order="1">
 <h3>Two candidates:</h3>
@@ -281,7 +281,7 @@ END); ?></section>
 
 <section><?= md(<<<END
 ## Remember this slide?
-![ZeppOS Userdata](<?= img('userdata.png'); ?>)
+![ZeppOS Userdata](<?= img('userdata.png'); ?>){.rightbig}
 
 <h3>Two candidates:</h3>
 <ul>
