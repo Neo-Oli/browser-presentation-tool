@@ -207,6 +207,7 @@ td {
 }
 
 .exclamation {
+    text-wrap:nowrap;
     font-size: 3rem;
     transform: rotate(-5deg);
     transform-origin: center;

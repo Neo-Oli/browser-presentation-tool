@@ -17,7 +17,7 @@
 END); ?></section>
 <section><?= md(<<<END
 ## Gadgetbridge
-![Gadgetbridge homepage](<?= img('gadgetbridge-website.png'); ?>){.right}
+![Gadgetbridge homepage](<?= img('gadgetbridge-website.png'); ?>){.rightbig}
 
 - FOSS
 - Replaces proprietary apps
@@ -51,7 +51,17 @@ END); ?>
 ## Dashboard
 <div class="imgrow" markdown="1">
 ![Gadgetbridge dashboard 1](<?= img('gadgetbridge-dashboard-1.png'); ?>)
+![Gadgetbridge dashboard 1](<?= img('gadgetbridge-dashboard-1.1.png'); ?>)
+![Gadgetbridge dashboard 1](<?= img('gadgetbridge-dashboard-1.2.png'); ?>)
+</div>
+END); ?>
+</section>
+<section><?= md(<<<END
+## Dashboard
+<div class="imgrow" markdown="1">
 ![Gadgetbridge dashboard 2](<?= img('gadgetbridge-dashboard-2.png'); ?>)
+![Gadgetbridge dashboard 2](<?= img('gadgetbridge-dashboard-2.1.png'); ?>)
+![Gadgetbridge dashboard 2](<?= img('gadgetbridge-dashboard-2.2.png'); ?>)
 </div>
 END); ?>
 </section>
@@ -292,7 +302,10 @@ END); ?></section>
 
 <section><?= md(<<<END
 ## Bugging the developers about it
+<div class="imgrow" markdown="1">
 ![Codeberg issue](<?= img('issue.png'); ?>)
+![Codeberg issue](<?= img('issue2.png'); ?>)
+</div>
 END); ?></section>
 
 <section><?= md(<<<END
